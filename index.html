@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+
+<!-- Perplexity Computer Attribution — SEO Meta Tags -->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NorCal Insurance Dominator — Command Center</title>
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<style>
+/* ═══════════════════════════════════════════════════════
+   NORCAL INSURANCE DOMINATOR — PREMIUM DARK COMMAND CENTER
+   Bloomberg Terminal × Military Command × Luxury Automotive
+   ═══════════════════════════════════════════════════════ */
+
+:root {
+  /* Core Palette — Deep Navy-Black War Room */
+  --bg: #0a0e1a;
+  --surface: #111827;
+  --surface-2: #1a2235;
+  --surface-offset: #151d2e;
+  --border: #1e2a3f;
+  --divider: #1a2538;
+  --text: #f0f2f5;
+  --text-muted: #8b95a8;
+  --text-faint: #4a5568;
+  --text-inverse: #0a0e1a;
+
+  /* Accent System */
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --primary-highlight: rgba(59,130,246,0.12);
+  --primary-glow: rgba(59,130,246,0.25);
+  --accent: #f97316;
+  --accent-hover: #ea580c;
+  --accent-glow: rgba(249,115,22,0.2);
+  --success: #10b981;
+  --success-bg: rgba(16,185,129,0.1);
+  --warning: #f59e0b;
+  --warning-bg: rgba(245,158,11,0.1);
+  --error: #ef4444;
+  --error-bg: rgba(239,68,68,0.1);
+  --gold: #eab308;
+  --gold-bg: rgba(234,179,8,0.1);
+
+  /* Glass Effect */
+  --glass-bg: rgba(17,24,39,0.7);
+  --glass-border: rgba(59,130,246,0.15);
+  --glass-blur: blur(20px);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.4), 0 1px 2px rgba(0,0,0,.3);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.5), 0 2px 4px rgba(0,0,0,.3);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,.6), 0 4px 8px rgba(0,0,0,.3);
+  --shadow-glow-blue: 0 0 20px rgba(59,130,246,0.15), 0 0 60px rgba(59,130,246,0.05);
+  --shadow-glow-accent: 0 0 20px rgba(249,115,22,0.15), 0 0 60px rgba(249,115,22,0.05);
+
+  /* Radius */
+  --r-sm: 4px; --r-md: 6px; --r-lg: 12px; --r-xl: 16px; --r-full: 9999px;
+
+  /* Typography */
+  --font-display: 'Cabinet Grotesk', system-ui, sans-serif;
+  --font-body: 'Satoshi', system-ui, sans-serif;
+
+  /* Spacing */
+  --sp-1: .25rem; --sp-2: .5rem; --sp-3: .75rem; --sp-4: 1rem; --sp-5: 1.25rem; --sp-6: 1.5rem; --sp-8: 2rem; --sp-10: 2.5rem; --sp-12: 3rem;
+
+  /* Text Scale */
+  --text-xs: clamp(.75rem,.7rem + .2vw,.8125rem);
+  --text-sm: clamp(.8125rem,.78rem + .2vw,.875rem);
+  --text-base: clamp(.9375rem,.9rem + .2vw,1rem);
+  --text-lg: clamp(1.125rem,1rem + .6vw,1.375rem);
+  --text-xl: clamp(1.5rem,1.2rem + 1.2vw,2.125rem);
+  --text-2xl: clamp(2rem,1.5rem + 2vw,3rem);
+
+  /* Transitions */
+  --ease: cubic-bezier(.16,1,.3,1);
+  --t-fast: 150ms var(--ease);
+  --t-base: 250ms var(--ease);
+  --t-slow: 400ms var(--ease);
+}
+
+/* Light Theme Override */
+[data-theme="light"] {
+  --bg: #f0f2f7;
+  --surface: #ffffff;
+  --surface-2: #f8f9fc;
+  --surface-offset: #eef1f6;
+  --border: #d4d8e0;
+  --divider: #e2e6ed;
+  --text: #1a1f2e;
+  --text-muted: #5a6478;
+  --text-faint: #9aa0ad;
+  --text-inverse: #ffffff;
+  --primary-highlight: rgba(59,130,246,0.08);
+  --primary-glow: rgba(59,130,246,0.12);
+  --accent-glow: rgba(249,115,22,0.1);
+  --glass-bg: rgba(255,255,255,0.8);
+  --glass-border: rgba(59,130,246,0.12);
+  --success-bg: rgba(16,185,129,0.08);
+  --warning-bg: rgba(245,158,11,0.08);
+  --error-bg: rgba(239,68,68,0.08);
+  --gold-bg: rgba(234,179,8,0.08);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.04);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,.1), 0 4px 8px rgba(0,0,0,.05);
+  --shadow-glow-blue: 0 0 20px rgba(59,130,246,0.08);
+  --shadow-glow-accent: 0 0 20px rgba(249,115,22,0.08);
+}
+
+/* ═══ RESETS ═══ */
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+html { -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; scroll-behavior:smooth; }
+body { min-height:100dvh; font-family:var(--font-body); font-size:var(--text-sm); color:var(--text); background:var(--bg); display:flex; overflow-x:hidden; position:relative; }
+button { cursor:pointer; background:none; border:none; font:inherit; color:inherit; }
+input,textarea,select { font:inherit; color:inherit; background:transparent; border:none; outline:none; }
+a { color:inherit; text-decoration:none; }
+table { border-collapse:collapse; width:100%; }
+.sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; }
+
+/* ═══ ANIMATED BACKGROUND ═══ */
+body::before {
+  content:'';
+  position:fixed;
+  inset:0;
+  z-index:0;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 40%, rgba(59,130,246,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 60%, rgba(249,115,22,0.04) 0%, transparent 50%),
+    radial-gradient(ellipse 90% 60% at 50% 80%, rgba(16,185,129,0.03) 0%, transparent 50%);
+  animation: bgPulse 20s ease-in-out infinite alternate;
+  pointer-events:none;
+}
+@keyframes bgPulse {
+  0% { opacity:.6; transform:scale(1); }
+  50% { opacity:1; transform:scale(1.05); }
+  100% { opacity:.7; transform:scale(1.02); }
+}
+
+/* Dot grid overlay */
+body::after {
+  content:'';
+  position:fixed;
+  inset:0;
+  z-index:0;
+  background-image: radial-gradient(circle, rgba(59,130,246,0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events:none;
+}
+
+/* ═══ SCROLLBAR ═══ */
+::-webkit-scrollbar { width:5px; height:5px; }
+::-webkit-scrollbar-track { background:transparent; }
+::-webkit-scrollbar-thumb { background:var(--border); border-radius:var(--r-full); }
+::-webkit-scrollbar-thumb:hover { background:var(--text-faint); }
+
+/* ═══ LAYOUT ═══ */
+#sidebar {
+  width:260px; min-height:100vh; position:fixed; left:0; top:0; bottom:0; z-index:100;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-right:1px solid var(--glass-border);
+  display:flex; flex-direction:column;
+  transition: transform 350ms var(--ease);
+  overflow-y:auto;
+}
+#main { margin-left:260px; min-height:100vh; display:flex; flex-direction:column; flex:1; overflow-x:hidden; position:relative; z-index:1; }
+#topbar {
+  height:60px; position:sticky; top:0; z-index:50;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom:1px solid var(--glass-border);
+  display:flex; align-items:center; gap:var(--sp-4); padding:0 var(--sp-6);
+}
+#content { flex:1; padding:var(--sp-6); max-width:1440px; width:100%; }
+
+/* ═══ SIDEBAR ═══ */
+.sidebar-logo {
+  padding:var(--sp-5) var(--sp-5) var(--sp-4);
+  border-bottom:1px solid var(--divider);
+  display:flex; align-items:center; gap:var(--sp-3);
+  background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(249,115,22,0.05));
+}
+.logo-icon {
+  width:40px; height:40px; border-radius:var(--r-lg);
+  background: linear-gradient(135deg, var(--primary), #6366f1);
+  display:flex; align-items:center; justify-content:center;
+  box-shadow: var(--shadow-glow-blue);
+  flex-shrink:0;
+}
+.logo-text { font-family:var(--font-display); font-weight:800; font-size:var(--text-base); line-height:1.2; }
+.logo-sub { font-size:var(--text-xs); color:var(--text-muted); font-weight:400; }
+
+.nav-section {
+  padding:var(--sp-5) var(--sp-5) var(--sp-2); font-size:.6rem; font-weight:700;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--text-faint);
+}
+.nav-item {
+  display:flex; align-items:center; gap:var(--sp-3);
+  padding:var(--sp-2) var(--sp-4); margin:2px var(--sp-3);
+  border-radius:var(--r-md); cursor:pointer;
+  transition: all var(--t-fast);
+  font-size:var(--text-xs); font-weight:500; color:var(--text-muted);
+  position:relative;
+}
+.nav-item:hover { background:var(--surface-offset); color:var(--text); }
+.nav-item.active {
+  background:var(--primary-highlight); color:var(--primary); font-weight:700;
+}
+.nav-item.active::before {
+  content:''; position:absolute; left:0; top:4px; bottom:4px; width:3px;
+  background:var(--primary); border-radius:var(--r-full);
+  animation: slideInLeft 200ms var(--ease);
+}
+@keyframes slideInLeft { from { transform:scaleY(0); } to { transform:scaleY(1); } }
+
+.territory-badge {
+  background: linear-gradient(135deg, var(--primary-highlight), rgba(99,102,241,0.12));
+  color:var(--primary); border-radius:var(--r-full);
+  padding:var(--sp-2) var(--sp-4); font-size:var(--text-xs); font-weight:700;
+  text-align:center; display:block; margin:var(--sp-4) var(--sp-4) 0;
+  border:1px solid var(--glass-border);
+}
+.sidebar-footer {
+  margin-top:auto; padding:var(--sp-4) var(--sp-5);
+  border-top:1px solid var(--divider);
+}
+
+/* ═══ TOPBAR ═══ */
+.topbar-title { font-family:var(--font-display); font-weight:800; font-size:var(--text-lg); flex:1; }
+.topbar-actions { display:flex; align-items:center; gap:var(--sp-3); }
+
+/* ═══ BUTTONS ═══ */
+.btn {
+  display:inline-flex; align-items:center; gap:var(--sp-2);
+  padding:var(--sp-2) var(--sp-5); border-radius:var(--r-md);
+  font-size:var(--text-xs); font-weight:700; cursor:pointer;
+  transition: all var(--t-fast); border:1px solid transparent;
+  white-space:nowrap; position:relative; overflow:hidden;
+}
+.btn:active { transform:scale(.97); }
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), #2563eb);
+  color:#fff; box-shadow: var(--shadow-sm);
+}
+.btn-primary:hover { background: linear-gradient(135deg, var(--primary-hover), #1d4ed8); transform:translateY(-1px); box-shadow: var(--shadow-md); }
+.btn-accent {
+  background: linear-gradient(135deg, var(--accent), #ea580c);
+  color:#fff; box-shadow: var(--shadow-sm), var(--shadow-glow-accent);
+}
+.btn-accent:hover { background: linear-gradient(135deg, var(--accent-hover), #c2410c); transform:translateY(-1px); box-shadow: var(--shadow-md), var(--shadow-glow-accent); }
+.btn-ghost { border-color:var(--border); color:var(--text-muted); background:var(--surface); }
+.btn-ghost:hover { background:var(--surface-offset); color:var(--text); transform:translateY(-1px); }
+.btn-success { background: linear-gradient(135deg, var(--success), #059669); color:#fff; }
+.icon-btn {
+  width:36px; height:36px; display:inline-flex; align-items:center; justify-content:center;
+  border-radius:var(--r-md); transition:all var(--t-fast); flex-shrink:0;
+}
+.icon-btn:hover { background:var(--surface-offset); transform:scale(1.05); }
+
+/* ═══ PAGES / TRANSITIONS ═══ */
+.page { display:none; animation: pageIn 350ms var(--ease); }
+.page.active { display:block; }
+@keyframes pageIn {
+  from { opacity:0; transform:translateY(8px); }
+  to { opacity:1; transform:translateY(0); }
+}
+
+/* ═══ GLASS CARDS ═══ */
+.card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border:1px solid var(--glass-border);
+  border-radius:var(--r-lg); padding:var(--sp-5);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--t-fast);
+}
+.card:hover { box-shadow: var(--shadow-md); }
+.card-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:var(--sp-4); }
+.card-title { font-family:var(--font-display); font-size:var(--text-sm); font-weight:700; }
+
+/* ═══ KPI CARDS ═══ */
+.kpi-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:var(--sp-4); margin-bottom:var(--sp-6); }
+.kpi-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border:1px solid var(--glass-border);
+  border-radius:var(--r-lg); padding:var(--sp-5);
+  position:relative; overflow:hidden;
+  transition: all var(--t-fast);
+}
+.kpi-card::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:2px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  opacity:.6;
+}
+.kpi-card:hover { transform:translateY(-2px); box-shadow: var(--shadow-glow-blue); }
+.kpi-label {
+  font-size:var(--text-xs); color:var(--text-muted); font-weight:600;
+  text-transform:uppercase; letter-spacing:.07em; margin-bottom:var(--sp-3);
+}
+.kpi-value {
+  font-family:var(--font-display); font-size:clamp(1.5rem,3vw,2.25rem);
+  font-weight:800; font-variant-numeric:tabular-nums; line-height:1; margin-bottom:6px;
+}
+.kpi-delta { font-size:var(--text-xs); color:var(--text-muted); font-weight:500; }
+.kpi-delta.up { color:var(--success); } .kpi-delta.down { color:var(--error); } .kpi-delta.warn { color:var(--warning); }
+
+/* ═══ GRIDS ═══ */
+.grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:var(--sp-5); }
+.grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:var(--sp-4); }
+.col-span-2 { grid-column:span 2; }
+
+/* ═══ FORMS ═══ */
+.form-group { margin-bottom:var(--sp-4); }
+.form-label {
+  display:block; font-size:var(--text-xs); font-weight:700; color:var(--text-muted);
+  margin-bottom:var(--sp-2); text-transform:uppercase; letter-spacing:.06em;
+}
+.form-input {
+  width:100%; background:var(--surface-offset); border:1px solid var(--border);
+  border-radius:var(--r-md); padding:var(--sp-2) var(--sp-3);
+  font-size:var(--text-sm); color:var(--text);
+  transition: border-color var(--t-fast), box-shadow var(--t-fast);
+}
+.form-input:focus { border-color:var(--primary); box-shadow:0 0 0 3px var(--primary-glow); outline:none; }
+.form-input::placeholder { color:var(--text-faint); }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:var(--sp-4); }
+select.form-input { cursor:pointer; }
+textarea.form-input { resize:vertical; min-height:80px; }
+
+/* ═══ TABLES ═══ */
+.table-wrap {
+  overflow-x:auto; border-radius:var(--r-lg);
+  border:1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+}
+.data-table { width:100%; font-size:var(--text-xs); }
+.data-table thead { background:var(--surface-offset); }
+.data-table th {
+  padding:var(--sp-3) var(--sp-4); font-weight:700; text-align:left;
+  color:var(--text-muted); white-space:nowrap;
+  border-bottom:1px solid var(--divider);
+  letter-spacing:.05em; text-transform:uppercase; font-size:.6rem;
+  position:sticky; top:0; background:var(--surface-offset); z-index:2;
+}
+.data-table td {
+  padding:var(--sp-3) var(--sp-4); border-bottom:1px solid var(--divider);
+  vertical-align:middle;
+}
+.data-table tr:last-child td { border-bottom:none; }
+.data-table tbody tr { transition: background var(--t-fast); }
+.data-table tbody tr:hover { background:var(--primary-highlight); }
+.data-table th.sortable { cursor:pointer; user-select:none; }
+.data-table th.sortable:hover { color:var(--primary); }
+
+/* ═══ BADGES ═══ */
+.badge {
+  display:inline-flex; align-items:center; gap:4px;
+  padding:3px 10px; border-radius:var(--r-full);
+  font-size:.6rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em;
+}
+.badge-success { background:var(--success-bg); color:var(--success); border:1px solid rgba(16,185,129,0.2); }
+.badge-warning { background:var(--warning-bg); color:var(--warning); border:1px solid rgba(245,158,11,0.2); }
+.badge-error { background:var(--error-bg); color:var(--error); border:1px solid rgba(239,68,68,0.2); }
+.badge-blue { background:var(--primary-highlight); color:var(--primary); border:1px solid rgba(59,130,246,0.2); }
+.badge-gold { background:var(--gold-bg); color:var(--gold); border:1px solid rgba(234,179,8,0.2); }
+.badge-neutral { background:var(--surface-offset); color:var(--text-muted); border:1px solid var(--border); }
+
+/* Score badges with gradients */
+.score-badge {
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:32px; padding:3px 8px; border-radius:var(--r-full);
+  font-size:.65rem; font-weight:800; font-variant-numeric:tabular-nums;
+}
+.score-badge.score-hot { background: linear-gradient(135deg, #ef4444, #dc2626); color:#fff; }
+.score-badge.score-warm { background: linear-gradient(135deg, #f97316, #ea580c); color:#fff; }
+.score-badge.score-med { background: linear-gradient(135deg, #3b82f6, #2563eb); color:#fff; }
+.score-badge.score-cool { background: var(--surface-offset); color:var(--text-muted); }
+
+/* ═══ STATUS DOTS ═══ */
+.dot { width:8px; height:8px; border-radius:50%; display:inline-block; flex-shrink:0; }
+.dot-green { background:#22c55e; box-shadow:0 0 6px rgba(34,197,94,0.4); }
+.dot-yellow { background:#eab308; box-shadow:0 0 6px rgba(234,179,8,0.4); }
+.dot-red { background:#ef4444; box-shadow:0 0 6px rgba(239,68,68,0.4); animation: pulse-dot 2s ease-in-out infinite; }
+.dot-grey { background:#6b7280; }
+@keyframes pulse-dot {
+  0%,100% { box-shadow:0 0 6px rgba(239,68,68,0.4); }
+  50% { box-shadow:0 0 12px rgba(239,68,68,0.7); }
+}
+
+/* Pulsing live indicator */
+.live-dot {
+  width:8px; height:8px; border-radius:50%; background:var(--success);
+  display:inline-block; position:relative;
+}
+.live-dot::after {
+  content:''; position:absolute; inset:-3px;
+  border-radius:50%; border:2px solid var(--success);
+  animation: livePing 1.5s cubic-bezier(0,0,0.2,1) infinite;
+}
+@keyframes livePing { 0% { transform:scale(1); opacity:.75; } 100% { transform:scale(1.8); opacity:0; } }
+
+/* ═══ TABS ═══ */
+.tabs {
+  display:flex; gap:0; border-bottom:2px solid var(--divider);
+  margin-bottom:var(--sp-5); overflow-x:auto;
+  position:relative;
+}
+.tab {
+  padding:var(--sp-3) var(--sp-5); font-size:var(--text-xs); font-weight:600;
+  cursor:pointer; border-bottom:2px solid transparent;
+  margin-bottom:-2px; color:var(--text-muted);
+  transition:all var(--t-fast); white-space:nowrap;
+}
+.tab:hover { color:var(--text); }
+.tab.active {
+  color:var(--primary); border-bottom-color:var(--primary);
+  text-shadow: 0 0 20px rgba(59,130,246,0.3);
+}
+.tab-panel { display:none; animation: pageIn 250ms var(--ease); }
+.tab-panel.active { display:block; }
+
+/* ═══ ALERTS ═══ */
+.alert {
+  padding:var(--sp-4); border-radius:var(--r-lg);
+  margin-bottom:var(--sp-4); display:flex; gap:var(--sp-3); align-items:flex-start;
+  backdrop-filter:blur(8px);
+  border:1px solid;
+}
+.alert-warning { background:var(--warning-bg); border-color:rgba(245,158,11,0.25); color:var(--warning); border-left:3px solid var(--warning); }
+.alert-error { background:var(--error-bg); border-color:rgba(239,68,68,0.25); color:var(--error); border-left:3px solid var(--error); }
+.alert-success { background:var(--success-bg); border-color:rgba(16,185,129,0.25); color:var(--success); border-left:3px solid var(--success); }
+.alert-info { background:var(--primary-highlight); border-color:rgba(59,130,246,0.25); color:var(--primary); border-left:3px solid var(--primary); }
+.alert-content { flex:1; }
+.alert-title { font-family:var(--font-display); font-weight:800; font-size:var(--text-xs); margin-bottom:4px; text-transform:uppercase; letter-spacing:.04em; }
+.alert p { font-size:var(--text-xs); line-height:1.65; opacity:.95; }
+
+/* ═══ PROGRESS ═══ */
+.progress-bar { height:8px; background:var(--surface-offset); border-radius:var(--r-full); overflow:hidden; position:relative; }
+.progress-bar::before { content:''; position:absolute; inset:0; background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.05) 50%, transparent 100%); animation: shimmer 2s infinite; }
+@keyframes shimmer { from { transform:translateX(-100%); } to { transform:translateX(100%); } }
+.progress-fill { height:100%; border-radius:var(--r-full); transition:width .8s var(--ease); position:relative; z-index:1; }
+.progress-fill.green { background: linear-gradient(90deg, var(--success), #34d399); }
+.progress-fill.orange { background: linear-gradient(90deg, var(--accent), #fb923c); }
+.progress-fill.red { background: linear-gradient(90deg, var(--error), #f87171); }
+.progress-fill:not(.green):not(.orange):not(.red) { background: linear-gradient(90deg, var(--primary), #60a5fa); }
+
+/* ═══ MODAL ═══ */
+.modal-overlay {
+  position:fixed; inset:0; background:rgba(0,0,0,.7); z-index:200;
+  display:none; align-items:center; justify-content:center;
+  backdrop-filter:blur(8px);
+}
+.modal-overlay.open { display:flex; }
+.modal {
+  background:var(--surface); border:1px solid var(--glass-border);
+  border-radius:var(--r-xl); padding:var(--sp-6);
+  max-width:640px; width:92vw; max-height:90vh; overflow-y:auto;
+  box-shadow: var(--shadow-lg), var(--shadow-glow-blue);
+  animation: modalIn 300ms var(--ease);
+}
+@keyframes modalIn { from { opacity:0; transform:scale(.95) translateY(10px); } to { opacity:1; transform:scale(1) translateY(0); } }
+.modal-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:var(--sp-5); }
+.modal-title { font-family:var(--font-display); font-size:var(--text-lg); font-weight:800; }
+
+/* ═══ SEARCH ═══ */
+.search-wrap { position:relative; flex:1; max-width:320px; }
+.search-wrap i { position:absolute; left:10px; top:50%; transform:translateY(-50%); color:var(--text-faint); pointer-events:none; }
+.search-input {
+  width:100%; background:var(--surface-offset); border:1px solid var(--border);
+  border-radius:var(--r-md); padding:var(--sp-2) var(--sp-3) var(--sp-2) 34px;
+  font-size:var(--text-xs); transition: all var(--t-fast);
+}
+.search-input:focus { border-color:var(--primary); box-shadow:0 0 0 3px var(--primary-glow); outline:none; }
+
+/* ═══ PIPELINE ═══ */
+.pipeline-board { display:grid; grid-template-columns:repeat(5,minmax(200px,1fr)); gap:var(--sp-4); overflow-x:auto; padding-bottom:var(--sp-2); }
+.pipeline-col {
+  background:var(--surface-offset); border-radius:var(--r-lg); padding:var(--sp-3); min-height:400px;
+  border:1px solid var(--divider);
+}
+.pipeline-col-header {
+  font-size:var(--text-xs); font-weight:700; margin-bottom:var(--sp-3);
+  display:flex; align-items:center; justify-content:space-between;
+  text-transform:uppercase; letter-spacing:.07em; color:var(--text-muted);
+}
+.pipeline-card {
+  background: var(--glass-bg); backdrop-filter:blur(8px);
+  border:1px solid var(--glass-border); border-radius:var(--r-md);
+  padding:var(--sp-3); margin-bottom:var(--sp-2); cursor:pointer;
+  transition: all var(--t-fast);
+}
+.pipeline-card:hover { box-shadow:var(--shadow-md), var(--shadow-glow-blue); transform:translateY(-2px); border-color:var(--primary); }
+.pipeline-card-name { font-weight:700; font-size:var(--text-xs); margin-bottom:4px; }
+.pipeline-card-detail { font-size:.65rem; color:var(--text-muted); }
+.pipeline-count {
+  background: linear-gradient(135deg, var(--primary), #6366f1);
+  color:#fff; border-radius:var(--r-full);
+  font-size:.6rem; font-weight:800; min-width:20px; height:20px;
+  display:inline-flex; align-items:center; justify-content:center; padding:0 6px;
+}
+
+/* ═══ SCRIPTS ═══ */
+.script-card {
+  background:var(--surface-offset); border-radius:var(--r-md);
+  padding:var(--sp-5); margin-bottom:var(--sp-4);
+  border-left:3px solid var(--primary);
+  transition: all var(--t-fast);
+}
+.script-card:hover { box-shadow:var(--shadow-sm); }
+.script-card.agent { border-left-color:var(--accent); }
+.script-card.prospect { border-left-color:var(--gold); }
+.script-role { font-family:var(--font-display); font-size:.65rem; font-weight:800; text-transform:uppercase; letter-spacing:.1em; color:var(--text-faint); margin-bottom:8px; }
+.script-text { font-size:var(--text-xs); line-height:1.75; color:var(--text); }
+
+/* ═══ OBJECTIONS ═══ */
+.objection-item { border:1px solid var(--divider); border-radius:var(--r-md); margin-bottom:var(--sp-3); overflow:hidden; transition:all var(--t-fast); }
+.objection-item:hover { border-color:var(--primary); }
+.objection-header {
+  padding:var(--sp-3) var(--sp-4); background:var(--surface);
+  display:flex; align-items:center; justify-content:space-between;
+  cursor:pointer; font-weight:700; font-size:var(--text-xs);
+  transition:all var(--t-fast);
+}
+.objection-header:hover { background:var(--surface-offset); }
+.objection-body {
+  padding:var(--sp-4); background:var(--surface-offset);
+  display:none; font-size:var(--text-xs); line-height:1.8;
+  border-top:1px solid var(--divider);
+}
+.objection-body.open { display:block; }
+
+/* ═══ CHECKLIST ═══ */
+.checklist-item {
+  display:flex; align-items:flex-start; gap:var(--sp-3);
+  padding:var(--sp-2) var(--sp-3); border-radius:var(--r-md);
+  transition:background var(--t-fast);
+}
+.checklist-item:hover { background:var(--surface-offset); }
+.check-box {
+  width:20px; height:20px; min-width:20px;
+  border:2px solid var(--border); border-radius:var(--r-sm);
+  cursor:pointer; display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  transition:all 200ms var(--ease); margin-top:1px;
+}
+.check-box:hover { border-color:var(--primary); }
+.check-box.checked { background: linear-gradient(135deg, var(--success), #34d399); border-color:var(--success); animation: checkPop 300ms var(--ease); }
+@keyframes checkPop { 0% { transform:scale(1); } 50% { transform:scale(1.2); } 100% { transform:scale(1); } }
+.checklist-text { font-size:var(--text-xs); line-height:1.5; transition: all 300ms var(--ease); }
+.checklist-text.done { text-decoration:line-through; color:var(--text-faint); }
+
+/* ═══ TOAST ═══ */
+.toast-container { position:fixed; bottom:var(--sp-6); right:var(--sp-6); z-index:300; display:flex; flex-direction:column; gap:var(--sp-2); }
+.toast {
+  background: var(--glass-bg); backdrop-filter: blur(16px);
+  border:1px solid var(--glass-border); border-radius:var(--r-lg);
+  padding:var(--sp-3) var(--sp-5); font-size:var(--text-xs); font-weight:600;
+  box-shadow: var(--shadow-lg), var(--shadow-glow-blue);
+  animation: toastIn .35s var(--ease);
+}
+@keyframes toastIn { from { transform:translateX(120%); opacity:0; } to { transform:translateX(0); opacity:1; } }
+@keyframes toastOut { from { opacity:1; transform:translateX(0); } to { opacity:0; transform:translateX(40px); } }
+
+/* ═══ UTILITIES ═══ */
+.divider { height:1px; background:var(--divider); margin:var(--sp-5) 0; }
+.text-muted { color:var(--text-muted); } .text-sm { font-size:var(--text-xs); }
+.mt-4 { margin-top:var(--sp-4); } .mb-4 { margin-bottom:var(--sp-4); }
+.mb-3 { margin-bottom:var(--sp-3); } .mb-0 { margin-bottom:0; }
+.fw-700 { font-weight:700; } .flex { display:flex; } .flex-center { display:flex; align-items:center; }
+.gap-2 { gap:var(--sp-2); } .gap-3 { gap:var(--sp-3); } .gap-4 { gap:var(--sp-4); }
+.w-full { width:100%; }
+.empty-state { text-align:center; padding:var(--sp-12) var(--sp-8); color:var(--text-muted); }
+.gradient-text { background:linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+
+/* Footer */
+.app-footer {
+  padding:var(--sp-4) var(--sp-6); border-top:1px solid var(--divider);
+  font-size:.6rem; color:var(--text-faint); text-align:center;
+  display:flex; align-items:center; justify-content:center; gap:var(--sp-3);
+}
+.app-footer a { color:var(--text-faint); text-decoration:underline; transition:color var(--t-fast); }
+.app-footer a:hover { color:var(--primary); }
+
+/* ═══ RESPONSIVE ═══ */
+@media(max-width:900px) {
+  #sidebar { transform:translateX(-100%); }
+  #sidebar.open { transform:translateX(0); box-shadow:var(--shadow-lg); }
+  #main { margin-left:0; }
+  .grid-2, .grid-3 { grid-template-columns:1fr; }
+  .col-span-2 { grid-column:span 1; }
+  .kpi-grid { grid-template-columns:repeat(2,1fr); }
+  .form-row { grid-template-columns:1fr; }
+  #menu-btn { display:flex!important; }
+  .pipeline-board { grid-template-columns:1fr; }
+  .topbar-title { font-size:var(--text-base); }
+  .search-wrap { max-width:200px; }
+}
+@media(max-width:480px) {
+  .kpi-grid { grid-template-columns:1fr; }
+  #content { padding:var(--sp-4); }
+  .search-wrap { display:none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════ SIDEBAR ═══════ -->
+<aside id="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-icon">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+        <path d="M5 18L11 4L17 18" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7.5 14L14.5 14" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="17" cy="6" r="3.5" fill="#f97316"/>
+        <text x="17" y="8.5" text-anchor="middle" fill="white" font-size="5" font-weight="800">$</text>
+      </svg>
+    </div>
+    <div><div class="logo-text">InsureDominator</div><div class="logo-sub">NorCal Command Center 2026</div></div>
+  </div>
+  <span class="territory-badge">📍 Northern California Territory</span>
+
+  <div class="nav-section">Command Center</div>
+  <div class="nav-item active" onclick="nav('dashboard')"><i data-lucide="layout-dashboard" size="15"></i>Dashboard</div>
+  <div class="nav-item" onclick="nav('pipeline')"><i data-lucide="git-branch" size="15"></i>Recruiting Pipeline</div>
+  <div class="nav-item" onclick="nav('prospects')"><i data-lucide="users" size="15"></i>Prospect Database</div>
+
+  <div class="nav-section">Market Intel</div>
+  <div class="nav-item" onclick="nav('carriers')"><i data-lucide="building-2" size="15"></i>Carrier Intel Board</div>
+  <div class="nav-item" onclick="nav('market')"><i data-lucide="flame" size="15"></i>Crisis Map & Timeline</div>
+  <div class="nav-item" onclick="nav('territory')"><i data-lucide="map-pin" size="15"></i>Territory by County</div>
+
+  <div class="nav-section">Execution</div>
+  <div class="nav-item" onclick="nav('scripts')"><i data-lucide="message-square" size="15"></i>Scripts & Objections</div>
+  <div class="nav-item" onclick="nav('daily')"><i data-lucide="check-square" size="15"></i>Daily Game Plan</div>
+  <div class="nav-item" onclick="nav('calculator')"><i data-lucide="calculator" size="15"></i>Income Calculator</div>
+
+  <div class="sidebar-footer">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--sp-2)">
+      <span style="font-size:var(--text-xs);color:var(--text-muted)">Theme</span>
+      <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+    <div style="font-size:.6rem;color:var(--text-faint)">Updated: March 2026</div>
+  </div>
+</aside>
+
+<!-- ═══════ MAIN ═══════ -->
+<div id="main">
+<header id="topbar">
+  <button class="icon-btn" id="menu-btn" style="display:none" onclick="toggleSidebar()"><i data-lucide="menu" size="18"></i></button>
+  <span class="topbar-title" id="page-title">Dashboard</span>
+  <div class="topbar-actions">
+    <div class="search-wrap"><i data-lucide="search" size="13"></i><input type="text" class="search-input" placeholder="Search prospects, carriers..." oninput="globalSearch(this.value)"></div>
+    <button class="btn btn-accent" onclick="openAddProspect()"><i data-lucide="plus" size="13"></i>Add Prospect</button>
+  </div>
+</header>
+<main id="content">
+
+<!-- ══════════════════════ DASHBOARD ══════════════════════ -->
+<div class="page active" id="page-dashboard">
+  <div class="alert alert-error mb-4" style="box-shadow:var(--shadow-glow-accent)">
+    <i data-lucide="alert-triangle" size="16" style="flex-shrink:0;margin-top:2px"></i>
+    <div class="alert-content">
+      <div class="alert-title">🚨 NorCal Insurance Market Crisis — Your Competitive Advantage</div>
+      <p>7 of California's top 12 homeowners carriers have exited or halted new policies. State Farm, Allstate, Farmers, QBE, Nationwide, AmGUARD & Crestbrook all restricted or withdrawn. FAIR Plan surged to <strong>$700B exposure — up 5x since 2020</strong>. Surplus lines up 119% in H1 2025. <strong>Every displaced agent and stranded client is YOUR prospect.</strong></p>
+    </div>
+  </div>
+  <div class="kpi-grid" id="kpi-grid"></div>
+  <div class="grid-2">
+    <div class="card"><div class="card-header"><span class="card-title">🎯 Pipeline Momentum</span><span class="badge badge-blue"><span class="live-dot" style="margin-right:6px"></span>Live</span></div><div id="momentum-list"></div></div>
+    <div class="card"><div class="card-header"><span class="card-title">🔥 Top Opportunity Counties</span></div><div id="opportunity-list"></div></div>
+  </div>
+  <div class="grid-2 mt-4">
+    <div class="card"><div class="card-header"><span class="card-title">⚡ Today's Top Actions</span><button class="btn btn-ghost" onclick="nav('daily')">Full Plan →</button></div><div id="today-actions"></div></div>
+    <div class="card"><div class="card-header"><span class="card-title">📊 Carrier Quick Status</span><button class="btn btn-ghost" onclick="nav('carriers')">Full Intel →</button></div><div id="carrier-quick"></div></div>
+  </div>
+</div>
+
+<!-- ══════════════════════ PIPELINE ══════════════════════ -->
+<div class="page" id="page-pipeline">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--sp-5);flex-wrap:wrap;gap:var(--sp-3)">
+    <div><h2 style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:800">Recruiting Pipeline</h2><p class="text-muted text-sm">Track every prospect from cold lead to signed agent.</p></div>
+    <button class="btn btn-accent" onclick="openAddProspect()"><i data-lucide="plus" size="13"></i>Add Prospect</button>
+  </div>
+  <div class="pipeline-board" id="pipeline-board"></div>
+</div>
+
+<!-- ══════════════════════ PROSPECTS ══════════════════════ -->
+<div class="page" id="page-prospects">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--sp-5);flex-wrap:wrap;gap:var(--sp-3)">
+    <h2 style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:800">Prospect Database</h2>
+    <div class="flex gap-3" style="flex-wrap:wrap">
+      <select class="form-input" id="filter-type" onchange="renderProspects()" style="width:170px"><option value="">All Lines</option><option>Personal Lines</option><option>Commercial Lines</option><option>Both</option><option>Life & Health</option></select>
+      <select class="form-input" id="filter-stage" onchange="renderProspects()" style="width:150px"><option value="">All Stages</option><option>New Lead</option><option>Contacted</option><option>Appointment</option><option>Offer Sent</option><option>Closed</option></select>
+      <button class="btn btn-accent" onclick="openAddProspect()"><i data-lucide="plus" size="13"></i>New Prospect</button>
+    </div>
+  </div>
+  <div class="table-wrap"><table class="data-table"><thead><tr>
+    <th class="sortable" onclick="sortProspects('name')">Name</th><th>County</th><th>Lines</th><th>Carrier/Agency</th><th>Stage</th><th class="sortable" onclick="sortProspects('score')">Score</th><th>Last Contact</th><th>Actions</th>
+  </tr></thead><tbody id="prospects-table-body"></tbody></table></div>
+</div>
+
+<!-- ══════════════════════ CARRIERS ══════════════════════ -->
+<div class="page" id="page-carriers">
+  <h2 style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:800;margin-bottom:var(--sp-2)">Carrier Intelligence Board</h2>
+  <p class="text-muted text-sm mb-4">Live market status as of March 2026. Use this in EVERY recruiting conversation.</p>
+  <div class="alert alert-error mb-4">
+    <i data-lucide="x-circle" size="16" style="flex-shrink:0"></i>
+    <div class="alert-content">
+      <div class="alert-title">CARRIERS WITHDRAWN, HALTED OR EXITING NORCAL</div>
+      <p><strong>State Farm • Allstate • Farmers • Nationwide/Crestbrook • QBE Insurance • AmGUARD (Berkshire Hathaway) • Liberty Mutual/Safeco (Condo/Rental) • Tokio Marine • Falls Lake</strong> — all have exited or severely restricted NorCal. 650,000 homeowners now on FAIR Plan.</p>
+    </div>
+  </div>
+  <div class="tabs" id="carrier-tabs">
+    <div class="tab active" onclick="carrierTab('personal',this)">Personal Lines</div>
+    <div class="tab" onclick="carrierTab('commercial',this)">Commercial Lines</div>
+    <div class="tab" onclick="carrierTab('surplus',this)">E&amp;S / Surplus Lines</div>
+    <div class="tab" onclick="carrierTab('fairplan',this)">FAIR Plan Guide</div>
+  </div>
+  <div class="tab-panel active" id="carrier-panel-personal"><div class="table-wrap"><table class="data-table"><thead><tr><th>Carrier</th><th>NorCal Status</th><th>Wildfire/High-Risk Areas</th><th>Recruiting Angle</th></tr></thead><tbody id="carrier-personal-body"></tbody></table></div></div>
+  <div class="tab-panel" id="carrier-panel-commercial"><div class="table-wrap"><table class="data-table"><thead><tr><th>Carrier</th><th>Status</th><th>Key Lines</th><th>Opportunity</th></tr></thead><tbody id="carrier-commercial-body"></tbody></table></div></div>
+  <div class="tab-panel" id="carrier-panel-surplus">
+    <div class="alert alert-info mb-4"><i data-lucide="trending-up" size="14" style="flex-shrink:0"></i><div class="alert-content"><div class="alert-title">SURPLUS LINES UP 119% IN H1 2025 — Permanent Structural Shift</div><p>Surplus line transactions reached 171,551 in H1 2025 vs 78,309 the prior year. The Surplus Line Association of California confirmed in February 2026 this is a "permanent structural shift." Agents with E&S access are writing business competitors can't touch.</p></div></div>
+    <div class="table-wrap"><table class="data-table"><thead><tr><th>Carrier / MGA</th><th>Lines Written</th><th>NorCal Status</th><th>Key Advantage</th></tr></thead><tbody id="carrier-surplus-body"></tbody></table></div>
+  </div>
+  <div class="tab-panel" id="carrier-panel-fairplan"><div id="fairplan-content"></div></div>
+</div>
+
+<!-- ══════════════════════ MARKET / CRISIS ══════════════════════ -->
+<div class="page" id="page-market">
+  <h2 style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:800;margin-bottom:var(--sp-2)">NorCal Market Crisis Intelligence</h2>
+  <p class="text-muted text-sm mb-4">Know every fact on this page. This is your edge in every single conversation.</p>
+  <div class="grid-3 mb-4">
+    <div class="card" style="border-top:3px solid var(--error);box-shadow:var(--shadow-sm),0 0 30px rgba(239,68,68,.08)"><div class="kpi-label">CA Coverage Shortfall</div><div style="font-family:var(--font-display);font-size:1.8rem;font-weight:800;color:var(--error)">$1.35T–$2T</div><div class="text-sm text-muted">McKinsey, October 2025</div></div>
+    <div class="card" style="border-top:3px solid var(--warning);box-shadow:var(--shadow-sm),0 0 30px rgba(245,158,11,.08)"><div class="kpi-label">2025 LA Fire Claims Paid</div><div style="font-family:var(--font-display);font-size:1.8rem;font-weight:800;color:var(--warning)">$20.4B+</div><div class="text-sm text-muted">As of July 2025. More coming.</div></div>
+    <div class="card" style="border-top:3px solid var(--accent);box-shadow:var(--shadow-sm),0 0 30px rgba(249,115,22,.08)"><div class="kpi-label">E&S Transactions Growth</div><div style="font-family:var(--font-display);font-size:1.8rem;font-weight:800;color:var(--accent)">+119%</div><div class="text-sm text-muted">H1 2025 vs H1 2024 — SLA of CA</div></div>
+  </div>
+  <div class="grid-2">
+    <div class="card"><div class="card-title mb-4">📍 NorCal Counties by Risk & Opportunity</div><div id="county-risk-list"></div></div>
+    <div class="card"><div class="card-title mb-4">📅 Carrier Exit Timeline (2023–2026)</div><div id="timeline-list"></div></div>
+  </div>
+  <div class="card mt-4"><div class="card-title mb-4">🧠 5 Things Your Recruits Don't Know (That You Do)</div><div id="intel-bullets"></div></div>
+  <div class="card mt-4"><div class="card-header"><span class="card-title">✅ Carriers Committed to California (September 2025)</span></div><div class="grid-3" id="staying-carriers"></div></div>
+</div>
+
+<!-- ══════════════════════ TERRITORY ══════════════════════ -->
+<div class="page" id="page-territory">
+  <h2 style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:800;margin-bottom:var(--sp-2)">Territory Intelligence — Northern California by County</h2>
+  <p class="text-muted text-sm mb-4">Sorted by opportunity score. Red counties = maximum urgency. Use this to prioritize where to spend time.</p>
+  <div class="table-wrap"><table class="data-table"><thead><tr>
+    <th>County</th><th>Fire Hazard</th><th>Private Carrier Access</th><th>FAIR Plan %</th><th>Avg Premium ↑</th><th class="sortable">Opp. Score</th><th>Best Prospect Type</th>
+  </tr></thead><tbody id="territory-table-body"></tbody></table></div>
+  <div class="card mt-4"><div class="card-title mb-4">🎯 County Tier Strategy</div><div id="county-strategy"></div></div>
+</div>
+
+<!-- ══════════════════════ SCRIPTS ══════════════════════ -->
+<div class="page" id="page-scripts">
+  <h2 style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:800;margin-bottom:var(--sp-2)">Scripts, Objection Handlers & Talk Tracks</h2>
+  <p class="text-muted text-sm mb-4">Word-for-word scripts built for the NorCal market crisis. Memorize the objection handlers.</p>
+  <div class="tabs" id="script-tabs">
+    <div class="tab active" onclick="scriptTab('recruiting',this)">Recruiting Scripts</div>
+    <div class="tab" onclick="scriptTab('prospecting',this)">Prospecting (Clients)</div>
+    <div class="tab" onclick="scriptTab('objections',this)">Objection Handlers</div>
+    <div class="tab" onclick="scriptTab('followup',this)">Follow-Up Templates</div>
+  </div>
+  <div class="tab-panel active" id="script-panel-recruiting"><div id="recruiting-scripts"></div></div>
+  <div class="tab-panel" id="script-panel-prospecting"><div id="prospecting-scripts"></div></div>
+  <div class="tab-panel" id="script-panel-objections"><div id="objection-scripts"></div></div>
+  <div class="tab-panel" id="script-panel-followup"><div id="followup-scripts"></div></div>
+</div>
+
+<!-- ══════════════════════ DAILY GAME PLAN ══════════════════════ -->
+<div class="page" id="page-daily">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--sp-5);flex-wrap:wrap;gap:var(--sp-3)">
+    <div><h2 style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:800">Daily Game Plan</h2><p class="text-muted text-sm" id="today-date"></p></div>
+    <button class="btn btn-ghost" onclick="resetDaily()"><i data-lucide="rotate-ccw" size="13"></i>Reset Day</button>
+  </div>
+  <div class="grid-2">
+    <div class="card"><div class="card-title mb-4">🌅 Morning Setup (6–9 AM)</div><div id="morning-checklist"></div></div>
+    <div class="card"><div class="card-title mb-4">📞 Recruiting Calls (9 AM–12 PM)</div><div id="morning-calls-checklist"></div></div>
+    <div class="card"><div class="card-title mb-4">🤝 Appointments & Field (1–4 PM)</div><div id="afternoon-checklist"></div></div>
+    <div class="card"><div class="card-title mb-4">📊 Evening Wrap-Up (4–6 PM)</div><div id="evening-checklist"></div></div>
+  </div>
+  <div class="card mt-4">
+    <div class="card-header"><span class="card-title">📈 Today's Progress</span><span class="badge badge-blue" id="progress-pct">0%</span></div>
+    <div class="progress-bar"><div class="progress-fill" id="daily-progress-bar" style="width:0%"></div></div>
+    <div style="display:flex;justify-content:space-between;margin-top:var(--sp-3)">
+      <span class="text-sm text-muted" id="progress-label">0 tasks complete</span>
+      <span class="text-sm fw-700" id="progress-status"></span>
+    </div>
+  </div>
+  <div class="card mt-4" style="border:1px solid var(--accent);box-shadow:var(--shadow-glow-accent)">
+    <div class="card-title mb-4" style="color:var(--accent)">🔑 Things You AREN'T Asking About (But Your Top Competitors Know)</div>
+    <div id="unknown-unknowns"></div>
+  </div>
+</div>
+
+<!-- ══════════════════════ CALCULATOR ══════════════════════ -->
+<div class="page" id="page-calculator">
+  <h2 style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:800;margin-bottom:var(--sp-2)">Income & Commission Calculator</h2>
+  <p class="text-muted text-sm mb-4">Model your override income and show prospects their earning potential in the crisis market.</p>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title mb-4">Your Recruiting Override Model</div>
+      <div class="form-group"><label class="form-label">Agents Recruited Per Month</label><input type="number" class="form-input" id="calc-agents" value="3" oninput="calcIncome()" min="0" max="50"></div>
+      <div class="form-group"><label class="form-label">Avg Agent Monthly Premium Volume ($)</label><input type="number" class="form-input" id="calc-premium" value="15000" oninput="calcIncome()"></div>
+      <div class="form-group"><label class="form-label">Your Override Commission (%)</label><input type="number" class="form-input" id="calc-override" value="5" oninput="calcIncome()" min="0" max="20" step=".5"></div>
+      <div class="form-group"><label class="form-label">Months to Model: <span id="calc-months-label" style="color:var(--primary);font-weight:800">12</span></label><input type="range" class="w-full" id="calc-months" value="12" min="1" max="36" oninput="calcIncome()" style="accent-color:var(--primary)"></div>
+      <div class="divider"></div>
+      <div id="calc-results"></div>
+    </div>
+    <div class="card">
+      <div class="card-title mb-4">Agent Earning Potential — Show Your Recruit This</div>
+      <div class="form-group"><label class="form-label">Agent Annual Book of Business ($)</label><input type="number" class="form-input" id="agent-book" value="500000" oninput="calcAgentIncome()"></div>
+      <div class="form-group"><label class="form-label">Commission Rate (%)</label><input type="number" class="form-input" id="agent-comm" value="12" oninput="calcAgentIncome()" step=".5"></div>
+      <div class="form-group"><label class="form-label">Renewal Retention Rate (%)</label><input type="number" class="form-input" id="agent-retention" value="85" oninput="calcAgentIncome()"></div>
+      <div class="divider"></div>
+      <div id="agent-results"></div>
+      <div class="alert alert-warning mt-4 mb-0"><i data-lucide="trending-up" size="13" style="flex-shrink:0"></i><div class="alert-content"><p>NorCal premiums up 22–34% due to market scarcity. Agents with E&S + admitted access are commanding higher commissions on every policy written.</p></div></div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="app-footer">
+  <span>NorCal Insurance Dominator © 2026</span>
+  <span>·</span>
+  <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
+</footer>
+</div>
+
+<!-- ═══════ ADD PROSPECT MODAL ═══════ -->
+<div class="modal-overlay" id="add-prospect-modal">
+  <div class="modal">
+    <div class="modal-header"><span class="modal-title" id="modal-prospect-title">Add Prospect</span><button class="icon-btn" onclick="closeModal('add-prospect-modal')"><i data-lucide="x" size="16"></i></button></div>
+    <form id="prospect-form" onsubmit="saveProspect(event)">
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Full Name *</label><input type="text" class="form-input" id="p-name" required placeholder="Jane Smith"></div>
+        <div class="form-group"><label class="form-label">Phone</label><input type="tel" class="form-input" id="p-phone" placeholder="(530) 555-0100"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" id="p-email" placeholder="jane@agency.com"></div>
+        <div class="form-group"><label class="form-label">County *</label>
+          <select class="form-input" id="p-county" required><option value="">Select County</option>
+            <option>Sacramento</option><option>El Dorado</option><option>Placer</option><option>Nevada</option><option>Shasta</option><option>Butte</option><option>Tehama</option><option>Siskiyou</option><option>Trinity</option><option>Humboldt</option><option>Mendocino</option><option>Lake</option><option>Glenn</option><option>Colusa</option><option>Yolo</option><option>Sonoma</option><option>Napa</option><option>Solano</option><option>Marin</option><option>San Francisco</option><option>Alameda</option><option>Contra Costa</option><option>Santa Clara</option><option>Other NorCal</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Insurance Lines *</label><select class="form-input" id="p-type" required><option value="">Select Lines</option><option>Personal Lines</option><option>Commercial Lines</option><option>Both</option><option>Life & Health</option></select></div>
+        <div class="form-group"><label class="form-label">Current Carrier/Agency</label><input type="text" class="form-input" id="p-carrier" placeholder="State Farm, Allstate..."></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Pipeline Stage</label><select class="form-input" id="p-stage"><option>New Lead</option><option>Contacted</option><option>Appointment</option><option>Offer Sent</option><option>Closed</option></select></div>
+        <div class="form-group"><label class="form-label">Experience (Years)</label><input type="number" class="form-input" id="p-experience" value="3" min="0" max="40"></div>
+      </div>
+      <div class="form-group"><label class="form-label">Est. Annual Book Size ($)</label><input type="number" class="form-input" id="p-book" placeholder="250000" step="10000"></div>
+      <div class="form-group"><label class="form-label">Notes / Pain Points (carrier issues, market complaints, motivations)</label><textarea class="form-input" id="p-notes" placeholder="e.g., Carrier dropped their NorCal book, frustrated, looking for E&S access..."></textarea></div>
+      <div style="display:flex;justify-content:flex-end;gap:var(--sp-3)">
+        <button type="button" class="btn btn-ghost" onclick="closeModal('add-prospect-modal')">Cancel</button>
+        <button type="submit" class="btn btn-accent">Save Prospect</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ═══════ PROSPECT DETAIL MODAL ═══════ -->
+<div class="modal-overlay" id="prospect-detail-modal">
+  <div class="modal">
+    <div class="modal-header"><span class="modal-title" id="detail-name">Prospect</span><button class="icon-btn" onclick="closeModal('prospect-detail-modal')"><i data-lucide="x" size="16"></i></button></div>
+    <div id="prospect-detail-body"></div>
+  </div>
+</div>
+
+<div class="toast-container" id="toast-container"></div>
+
+<script>
+// ═══════════════════════════════════════════════════════
+// NORCAL INSURANCE DOMINATOR — ALL DATA & LOGIC
+// ═══════════════════════════════════════════════════════
+
+// ═══════ PROSPECT DATA ═══════
+let prospects = [
+  {id:1,name:"Marcus Reynolds",phone:"(530) 221-0482",email:"mreynolds@sfarm.com",county:"Shasta",type:"Personal Lines",carrier:"State Farm",stage:"Contacted",experience:8,book:420000,notes:"State Farm agent – carrier halted new HO policies. Very frustrated. Has E&S leads going to competitors.",score:92},
+  {id:2,name:"Tanya Briggs",phone:"(916) 555-0118",email:"tbriggs@allstate.net",county:"Sacramento",type:"Both",carrier:"Allstate",stage:"Appointment",experience:12,book:680000,notes:"Allstate stopped writing new CA homeowners. Tanya has a solid commercial book too. Warm lead.",score:88},
+  {id:3,name:"Derek Choi",phone:"(530) 891-4477",email:"dchoi@farmers.com",county:"Butte",type:"Personal Lines",carrier:"Farmers",stage:"New Lead",experience:5,book:195000,notes:"Farmers contracted but unhappy since cap on new apps. Paradise rebuild area – clients desperate.",score:75},
+  {id:4,name:"Sofia Montoya",phone:"(707) 555-3391",email:"sofia@indy.com",county:"Sonoma",type:"Commercial Lines",carrier:"Independent",stage:"Offer Sent",experience:15,book:1200000,notes:"Independent broker. Losing commercial accounts she can't place. Needs admitted + E&S partnership.",score:96},
+  {id:5,name:"Levi Washington",phone:"(530) 527-0019",email:"lwash@nationwide.com",county:"Tehama",type:"Personal Lines",carrier:"Nationwide",stage:"Closed",experience:9,book:310000,notes:"Joined! Nationwide exited CA. He's writing through new E&S markets. First month strong.",score:99},
+  {id:6,name:"Patricia Nguen",phone:"(510) 555-8823",email:"pat.nguen@gmail.com",county:"Alameda",type:"Life & Health",carrier:"MetLife",stage:"Contacted",experience:3,book:90000,notes:"Life & health agent. Wants to expand into P&C. Good relationship with local businesses.",score:61},
+  {id:7,name:"Anthony Garza",phone:"(530) 342-9020",email:"agarza@norcalins.com",county:"Butte",type:"Both",carrier:"Independent",stage:"Appointment",experience:17,book:950000,notes:"Butte county veteran. Lost several clients post-Camp Fire. Asking about admitted HO access.",score:91},
+];
+let nextId = 8;
+let editingId = null;
+const stages = ["New Lead","Contacted","Appointment","Offer Sent","Closed"];
+
+// ═══════ NAVIGATION ═══════
+function nav(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  const el = document.getElementById('page-' + page);
+  if (el) el.classList.add('active');
+  document.querySelectorAll('.nav-item').forEach(n => {
+    if (n.getAttribute('onclick') && n.getAttribute('onclick').includes("'" + page + "'")) n.classList.add('active');
+  });
+  const titles = {
+    dashboard: 'Dashboard', pipeline: 'Recruiting Pipeline', prospects: 'Prospect Database',
+    carriers: 'Carrier Intelligence Board', market: 'Market Crisis Intel',
+    territory: 'Territory Intelligence', scripts: 'Scripts & Objection Handlers',
+    daily: 'Daily Game Plan', calculator: 'Income Calculator'
+  };
+  document.getElementById('page-title').textContent = titles[page] || page;
+  if (page === 'pipeline') renderPipeline();
+  if (page === 'prospects') renderProspects();
+  if (page === 'carriers') renderCarriers();
+  if (page === 'market') renderMarket();
+  if (page === 'scripts') renderScripts();
+  if (page === 'daily') renderDaily();
+  if (page === 'calculator') { calcIncome(); calcAgentIncome(); }
+  if (page === 'territory') renderTerritory();
+  const sidebar = document.getElementById('sidebar');
+  if (window.innerWidth <= 900) sidebar.classList.remove('open');
+}
+
+function toggleSidebar() { document.getElementById('sidebar').classList.toggle('open'); }
+
+// ═══════ SCORE BADGE HELPER ═══════
+function scoreBadge(score) {
+  const cls = score >= 90 ? 'score-hot' : score >= 80 ? 'score-warm' : score >= 70 ? 'score-med' : 'score-cool';
+  return `<span class="score-badge ${cls}">${score}</span>`;
+}
+
+// ═══════ STAGE BADGE HELPER ═══════
+function stageBadge(stage) {
+  const map = { 'New Lead':'neutral', 'Contacted':'blue', 'Appointment':'warning', 'Offer Sent':'gold', 'Closed':'success' };
+  return `<span class="badge badge-${map[stage] || 'neutral'}">${stage}</span>`;
+}
+
+// ═══════ DASHBOARD ═══════
+function renderDashboard() {
+  const kpis = [
+    {label:'Prospects in Pipeline', value:prospects.length, delta:'↑ 2 this week', cls:''},
+    {label:'Appts This Week', value:prospects.filter(p => p.stage === 'Appointment').length, delta:'Set 1 more today', cls:''},
+    {label:'Carriers Available', value:'19', delta:'vs 26 pre-crisis', cls:'warn'},
+    {label:'E&S Growth (2025)', value:'+119%', delta:'Permanent shift', cls:'up'},
+    {label:'FAIR Plan Exposure', value:'$700B', delta:'5x since 2020', cls:'down'},
+    {label:'Avg Prem Increase', value:'+28%', delta:'Your pitch advantage', cls:'up'},
+  ];
+  document.getElementById('kpi-grid').innerHTML = kpis.map(k => `
+    <div class="kpi-card">
+      <div class="kpi-label">${k.label}</div>
+      <div class="kpi-value">${k.value}</div>
+      <div class="kpi-delta ${k.cls}">${k.delta}</div>
+    </div>`).join('');
+
+  const top = [...prospects].sort((a, b) => b.score - a.score).slice(0, 4);
+  document.getElementById('momentum-list').innerHTML = top.map(p => `
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:var(--sp-3) 0;border-bottom:1px solid var(--divider);cursor:pointer" onclick="openDetail(${p.id})">
+      <div><div style="font-weight:700;font-size:var(--text-xs)">${p.name}</div><div style="font-size:.65rem;color:var(--text-muted)">${p.county} · ${p.type} · ${p.carrier}</div></div>
+      <div style="display:flex;align-items:center;gap:var(--sp-2)">${stageBadge(p.stage)}${scoreBadge(p.score)}</div>
+    </div>`).join('');
+
+  const counties = [
+    {n:'Shasta', reason:'State Farm, Farmers both halted new HO policies', score:98},
+    {n:'Butte', reason:'Camp Fire legacy — agents desperate for admitted access', score:97},
+    {n:'Sonoma', reason:'Wildfire history + Allstate/Nationwide exits', score:95},
+    {n:'El Dorado', reason:'FAIR Plan surge — agents looking for private alternatives', score:93},
+    {n:'Sacramento', reason:'Largest population, commercial clients underinsured', score:90},
+    {n:'Nevada', reason:'High SFH density + limited carrier options', score:88},
+  ];
+  document.getElementById('opportunity-list').innerHTML = counties.map((c, i) => `
+    <div style="display:flex;align-items:flex-start;gap:var(--sp-3);padding:var(--sp-3) 0;border-bottom:1px solid var(--divider)">
+      <div style="font-family:var(--font-display);font-size:1.1rem;font-weight:800;color:var(--${i < 2 ? 'error' : i < 4 ? 'warning' : 'primary'});min-width:24px">${i + 1}</div>
+      <div style="flex:1"><div style="font-weight:700;font-size:var(--text-xs)">${c.n} County</div><div style="font-size:.65rem;color:var(--text-muted)">${c.reason}</div></div>
+      ${scoreBadge(c.score)}
+    </div>`).join('');
+
+  document.getElementById('today-actions').innerHTML = [
+    {t:'Call Shasta County prospects before 10 AM', urgent:true},
+    {t:'LinkedIn message 5 Allstate/State Farm agents in NorCal', urgent:true},
+    {t:'Email FAIR Plan talking points to 3 warm leads', urgent:false},
+    {t:'Follow up with Sofia Montoya — offer stage 3 days old', urgent:true},
+    {t:'Review new Palisades MGA pricing for commercial pitch', urgent:false},
+    {t:'Update pipeline — move closed/dead leads out', urgent:false},
+  ].map(a => `<div style="display:flex;gap:var(--sp-3);align-items:center;padding:var(--sp-3) 0;border-bottom:1px solid var(--divider)">
+    <div class="dot ${a.urgent ? 'dot-red' : 'dot-yellow'}"></div>
+    <span style="font-size:var(--text-xs)">${a.t}</span>
+  </div>`).join('');
+
+  const carriers = [
+    {n:'Hippo Insurance', status:'✅ Active', notes:'Wildfire-prone OK w/mitigation'},
+    {n:'Openly / Homepoint', status:'✅ Active', notes:'HNW + standard in most counties'},
+    {n:'Mercury Insurance', status:'✅ Active', notes:'Solid auto + home in urban NorCal'},
+    {n:'AAA / CSAA', status:'⚠️ Selective', notes:'Members only; rising rates'},
+    {n:'State Farm HO', status:'❌ Halted', notes:'No new CA homeowners since 2023'},
+    {n:'Allstate HO', status:'❌ Exited', notes:'Left CA homeowners entirely'},
+  ];
+  document.getElementById('carrier-quick').innerHTML = carriers.map(c => `
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:var(--sp-3) 0;border-bottom:1px solid var(--divider)">
+      <div><div style="font-size:var(--text-xs);font-weight:700">${c.n}</div><div style="font-size:.65rem;color:var(--text-muted)">${c.notes}</div></div>
+      <span style="font-size:var(--text-xs);font-weight:600;white-space:nowrap">${c.status}</span>
+    </div>`).join('');
+}
+
+// ═══════ PIPELINE ═══════
+function renderPipeline() {
+  const board = document.getElementById('pipeline-board');
+  board.innerHTML = stages.map(stage => {
+    const items = prospects.filter(p => p.stage === stage);
+    return `<div class="pipeline-col">
+      <div class="pipeline-col-header">${stage}<span class="pipeline-count">${items.length}</span></div>
+      ${items.length === 0 ? '<div style="font-size:.65rem;color:var(--text-faint);text-align:center;padding:var(--sp-4)">Drop prospects here</div>' : ''}
+      ${items.map(p => `
+        <div class="pipeline-card" onclick="openDetail(${p.id})">
+          <div class="pipeline-card-name">${p.name}</div>
+          <div class="pipeline-card-detail">${p.county} · ${p.type}</div>
+          <div class="pipeline-card-detail" style="margin-top:4px">${p.carrier}</div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+            <span style="font-size:.65rem;color:var(--text-muted)">${p.experience}yr exp</span>
+            ${scoreBadge(p.score)}
+          </div>
+          ${p.book ? `<div style="font-size:.65rem;color:var(--success);margin-top:4px;font-weight:600">$${(p.book / 1000).toFixed(0)}K book</div>` : ''}
+        </div>`).join('')}
+    </div>`;
+  }).join('');
+  lucide.createIcons();
+}
+
+// ═══════ PROSPECTS TABLE ═══════
+let sortKey = 'score', sortDir = -1;
+function sortProspects(k) { if (sortKey === k) sortDir *= -1; else { sortKey = k; sortDir = -1; } renderProspects(); }
+function renderProspects() {
+  const typeFilter = document.getElementById('filter-type')?.value || '';
+  const stageFilter = document.getElementById('filter-stage')?.value || '';
+  let filtered = prospects.filter(p => (!typeFilter || p.type === typeFilter) && (!stageFilter || p.stage === stageFilter));
+  filtered.sort((a, b) => {
+    let av = a[sortKey] || '', bv = b[sortKey] || '';
+    if (typeof av === 'number') return (av - bv) * sortDir;
+    return String(av).localeCompare(String(bv)) * sortDir;
+  });
+  const tbody = document.getElementById('prospects-table-body');
+  if (!filtered.length) { tbody.innerHTML = `<tr><td colspan="8" style="text-align:center;padding:var(--sp-8);color:var(--text-muted)">No prospects found. <button class="btn btn-ghost" onclick="openAddProspect()">Add one?</button></td></tr>`; return; }
+  tbody.innerHTML = filtered.map(p => `
+    <tr onclick="openDetail(${p.id})" style="cursor:pointer">
+      <td><div style="font-weight:700">${p.name}</div><div style="font-size:.65rem;color:var(--text-muted)">${p.email || ''}</div></td>
+      <td>${p.county}</td>
+      <td><span class="badge badge-neutral">${p.type}</span></td>
+      <td style="font-size:var(--text-xs)">${p.carrier || '—'}</td>
+      <td>${stageBadge(p.stage)}</td>
+      <td>${scoreBadge(p.score)}</td>
+      <td style="color:var(--text-muted);font-size:var(--text-xs)">Today</td>
+      <td><div style="display:flex;gap:6px">
+        <button class="icon-btn" onclick="event.stopPropagation();editProspect(${p.id})" title="Edit"><i data-lucide="edit-2" size="13"></i></button>
+        <button class="icon-btn" onclick="event.stopPropagation();deleteProspect(${p.id})" title="Delete" style="color:var(--error)"><i data-lucide="trash-2" size="13"></i></button>
+      </div></td>
+    </tr>`).join('');
+  lucide.createIcons();
+}
+
+function globalSearch(q) {
+  if (!q) return;
+  const results = prospects.filter(p => p.name.toLowerCase().includes(q.toLowerCase()) || p.county.toLowerCase().includes(q.toLowerCase()) || (p.carrier && p.carrier.toLowerCase().includes(q.toLowerCase())));
+  if (results.length) { nav('prospects'); setTimeout(() => { document.getElementById('filter-type').value = ''; document.getElementById('filter-stage').value = ''; renderProspects(); }, 50); }
+}
+
+// ═══════ CARRIERS ═══════
+function carrierTab(t, el) {
+  document.querySelectorAll('#carrier-tabs .tab').forEach(x => x.classList.remove('active'));
+  document.querySelectorAll('[id^="carrier-panel-"]').forEach(x => x.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('carrier-panel-' + t).classList.add('active');
+  lucide.createIcons();
+}
+
+function renderCarriers() {
+  const personal = [
+    {n:'State Farm',s:'❌ Halted New HO',wf:'Not writing any new CA homeowners',r:'Every State Farm HO agent is vulnerable — approach NOW'},
+    {n:'Allstate',s:'❌ Exited CA HO',wf:'Completely withdrawn from CA homeowners',r:'Thousands of orphaned policyholders = agent opportunity'},
+    {n:'Farmers',s:'⚠️ Capped/Restricted',wf:'Severely limited new apps in FHSZ areas',r:'Farmers agents frustrated — lead with E&S access'},
+    {n:'Nationwide / Crestbrook',s:'❌ Exited',wf:'Exited CA homeowners and auto',r:'All Nationwide CA agents are displaced — easy target'},
+    {n:'AAA / CSAA',s:'⚠️ Members Only',wf:'Raising rates 20–40%; selective counties',r:'Membership requirement limits growth — pitch portability'},
+    {n:'Mercury Insurance',s:'✅ Active',wf:'Urban NorCal; limited FHSZ',r:'Growing in CA; recruit agents who can multi-carrier'},
+    {n:'Hippo Insurance',s:'✅ Active',wf:'Will write w/fire mitigation docs',r:'Tech-forward; good for younger recruits'},
+    {n:'Openly (Homepoint)',s:'✅ Active',wf:'HNW primary; some standard',r:'High-value clients = higher commissions'},
+    {n:'Branch Insurance',s:'✅ Active',wf:'Bundled HO+Auto; limited wildfire',r:'Bundled product = higher retention pitch'},
+    {n:'Bamboo Insurance',s:'✅ Active — NorCal',wf:'Specifically designed for CA wildfire market',r:'KEY CARRIER: Built for this crisis. Strong recruit pitch.'},
+    {n:'Kin Insurance',s:'✅ Entering CA 2025',wf:'Climate-risk tech underwriting',r:'New entrant — agents who join early get market share'},
+    {n:'Liberty Mutual / Safeco',s:'⚠️ Restricted',wf:'Exited condo/rental; limited HO',r:'SafeCo agents losing business — recruit them'},
+    {n:'Travelers',s:'⚠️ Selective',wf:'Available but stringent underwriting',r:'Commercial accounts viable — focus B2B recruits'},
+    {n:'ICW Group',s:'✅ Active',wf:'Strong workers comp + commercial HO',r:'Commercial specialists — great WC + package pitch'},
+    {n:'Wawanesa',s:'✅ Active',wf:'Northern CA admitted auto + home',r:'Low-profile carrier with solid availability — advantage'},
+  ];
+  document.getElementById('carrier-personal-body').innerHTML = personal.map(c => `
+    <tr><td style="font-weight:700">${c.n}</td><td>${c.s}</td><td style="font-size:var(--text-xs);color:var(--text-muted)">${c.wf}</td><td style="font-size:var(--text-xs);color:var(--success)">${c.r}</td></tr>`).join('');
+
+  const commercial = [
+    {n:'Travelers',s:'✅ Active',l:'BOP, GL, Commercial Property, WC',o:'Strong CA commercial market. Recruit commercial specialists.'},
+    {n:'Hartford',s:'✅ Active',l:'Small Biz, WC, Commercial Auto',o:'AARP partner, strong in small commercial — key for B2B agents'},
+    {n:'Employers Holdings',s:'✅ Active',l:'Small Business WC',o:'Workers comp specialists — growing in NorCal business corridors'},
+    {n:'AmTrust',s:'✅ Active',l:'Commercial WC, BOP',o:'Admitted WC across CA counties — high commission potential'},
+    {n:'ICW Group',s:'✅ Active',l:'WC + Commercial Package',o:'CA-focused — agents with WC book are gold recruits'},
+    {n:'Markel',s:'✅ Active (E&S)',l:'Specialty commercial, habitational',o:'E&S commercial — surplus lines agents are highly valuable'},
+    {n:'Scottsdale Insurance (Nationwide)',s:'⚠️ Selective',l:'E&S commercial',o:'Parent exited personal; commercial still writing'},
+    {n:'CNA',s:'✅ Active',l:'Large commercial, professional liability',o:'Mid-large commercial agents = big book value'},
+    {n:'Cincinnati Financial',s:'✅ Active',l:'Commercial + personal package',o:'Agent-centric model — recruit their agents with better contract'},
+    {n:'Employers Mutual (EMC)',s:'✅ Active',l:'Commercial Lines',o:'Midwest-rooted but active CA commercial'},
+  ];
+  document.getElementById('carrier-commercial-body').innerHTML = commercial.map(c => `
+    <tr><td style="font-weight:700">${c.n}</td><td>${c.s}</td><td style="font-size:var(--text-xs)">${c.l}</td><td style="font-size:var(--text-xs);color:var(--success)">${c.o}</td></tr>`).join('');
+
+  const surplus = [
+    {n:"Lloyd's of London (via MGAs)",l:'High-value homes, wildfire zone, unique risk',s:'✅ Active',a:"Will write what admitted carriers won't. The ultimate NorCal solution."},
+    {n:'Burns & Wilcox (MGA)',l:'High-value residential, commercial specialty',s:'✅ Active',a:'Most powerful MGA in NorCal. Essential partner for wildfire placements.'},
+    {n:'AmRisc',l:'Coastal, wildfire, catastrophe property',s:'✅ Active',a:'Catastrophe specialist — exact fit for FHSZ areas.'},
+    {n:'Palomar Holdings',l:'Wildfire, earthquake, specialty',s:'✅ Active',a:'Earthquake + wildfire specialty CA — growing rapidly.'},
+    {n:'GeoVera',l:'Earthquake, Wildfire',s:'✅ Active',a:'CA-focused specialty. Earthquake rider gap — selling point.'},
+    {n:'State Auto (E&S)',l:'Non-standard personal lines',s:'✅ Limited',a:'Admitted exited but E&S arm still writing.'},
+    {n:'Novamar Insurance (MGA)',l:'High-risk homes, hard-to-place',s:'✅ Active',a:'Specialty MGA with direct CA focus. Key recruitment talking point.'},
+    {n:'Palisades MGA',l:'Wildfire-zone residential',s:'✅ Active',a:'Purpose-built for CA wildfire. New — agents who carry this stand out.'},
+    {n:'Aegis Insurance (MGA)',l:'Non-admitted personal + commercial',s:'✅ Active',a:'Broad E&S access across CA. Important for independent recruits.'},
+    {n:'SL Power (SLAC)',l:'All lines surplus',s:'✅ Active',a:'119% growth — surplus line brokers are the market now.'},
+  ];
+  document.getElementById('carrier-surplus-body').innerHTML = surplus.map(c => `
+    <tr><td style="font-weight:700">${c.n}</td><td style="font-size:var(--text-xs)">${c.l}</td><td>${c.s}</td><td style="font-size:var(--text-xs);color:var(--success)">${c.a}</td></tr>`).join('');
+
+  document.getElementById('fairplan-content').innerHTML = `
+    <div class="alert alert-warning mb-4"><i data-lucide="alert-triangle" size="14" style="flex-shrink:0"></i>
+    <div class="alert-content"><div class="alert-title">FAIR Plan — Critical Pitch Context</div>
+    <p>California's FAIR Plan is the insurer of last resort. It now covers 700,000 homeowners — a 5x increase since 2020. <strong>Exposure: $700 billion.</strong> Average FAIR Plan premium is 2–3x higher than private market with FAR less coverage. Every FAIR Plan customer is a prospect for a private solution.</p></div></div>
+    <div class="grid-2">
+      <div class="card"><div class="card-title mb-3">FAIR Plan: What It Doesn't Cover</div>
+      ${['Theft','Personal property (unless added)','Water damage / flooding','Liability protection','Additional living expenses (ALE)','Earthquakes','Code upgrade costs','Garage/detached structures (limited)'].map(item => `
+        <div style="display:flex;gap:var(--sp-2);align-items:center;padding:6px 0;border-bottom:1px solid var(--divider)">
+          <span style="color:var(--error);font-weight:800;font-size:var(--text-xs)">✗</span>
+          <span style="font-size:var(--text-xs)">${item}</span>
+        </div>`).join('')}
+      </div>
+      <div class="card"><div class="card-title mb-3" style="color:var(--accent)">Your Pitch When a Client is on FAIR Plan</div>
+      ${['Their premium is likely $3,200–$6,000/yr for BARE MINIMUM coverage','No liability = one lawsuit destroys everything they built','No ALE = if fire hits, they have no place to stay','A DIC (Difference in Conditions) policy fills the gap — you can write this','Hippo, Bamboo, Openly, Wawanesa may still write them with mitigation docs','If home has Class A roof + defensible space clearance, options open significantly','Palomar or Burns & Wilcox E&S may be 20–30% cheaper than FAIR Plan with MORE coverage','Earthquake + FAIR Plan gap coverage = critical combo sell in NorCal'].map(item => `
+        <div style="display:flex;gap:var(--sp-2);align-items:flex-start;padding:6px 0;border-bottom:1px solid var(--divider)">
+          <span style="color:var(--success);font-weight:800;font-size:var(--text-xs);margin-top:2px">✓</span>
+          <span style="font-size:var(--text-xs)">${item}</span>
+        </div>`).join('')}
+      </div>
+    </div>`;
+  lucide.createIcons();
+}
+
+// ═══════ MARKET ═══════
+function renderMarket() {
+  const counties = [
+    {n:'Shasta',risk:'Extreme',access:'❌ Minimal',fair:'38%',prem:'+41%',score:99},
+    {n:'Butte',risk:'Extreme',access:'❌ Minimal',fair:'35%',prem:'+39%',score:98},
+    {n:'El Dorado',risk:'Very High',access:'⚠️ Limited',fair:'28%',prem:'+34%',score:95},
+    {n:'Nevada',risk:'Very High',access:'⚠️ Limited',fair:'31%',prem:'+36%',score:94},
+    {n:'Trinity',risk:'Extreme',access:'❌ Minimal',fair:'41%',prem:'+45%',score:97},
+    {n:'Siskiyou',risk:'Very High',access:'⚠️ Limited',fair:'33%',prem:'+38%',score:93},
+    {n:'Tehama',risk:'High',access:'⚠️ Limited',fair:'25%',prem:'+29%',score:89},
+    {n:'Sonoma',risk:'High',access:'⚠️ Partial',fair:'22%',prem:'+27%',score:88},
+    {n:'Lake',risk:'Very High',access:'❌ Minimal',fair:'36%',prem:'+42%',score:96},
+    {n:'Mendocino',risk:'High',access:'⚠️ Limited',fair:'30%',prem:'+35%',score:91},
+    {n:'Napa',risk:'High',access:'⚠️ Partial',fair:'18%',prem:'+24%',score:84},
+    {n:'Placer',risk:'Moderate-High',access:'⚠️ Partial',fair:'14%',prem:'+19%',score:79},
+    {n:'Sacramento',risk:'Moderate',access:'✅ Better',fair:'8%',prem:'+15%',score:72},
+    {n:'Alameda',risk:'Low',access:'✅ Available',fair:'5%',prem:'+12%',score:65},
+    {n:'Santa Clara',risk:'Low',access:'✅ Available',fair:'4%',prem:'+11%',score:63},
+  ];
+  document.getElementById('county-risk-list').innerHTML = counties.sort((a, b) => b.score - a.score).map(c => `
+    <div style="display:grid;grid-template-columns:1fr auto;align-items:center;padding:6px 0;border-bottom:1px solid var(--divider);gap:var(--sp-3)">
+      <div><div style="font-weight:700;font-size:var(--text-xs)">${c.n} County</div>
+      <div style="font-size:.65rem;color:var(--text-muted)">Carrier access: ${c.access} · FAIR: ${c.fair} · Prem ↑${c.prem}</div></div>
+      ${scoreBadge(c.score)}
+    </div>`).join('');
+
+  const timeline = [
+    {date:'May 2023',event:'State Farm announces halt on ALL new CA homeowners policies',cls:'error'},
+    {date:'Nov 2023',event:'Allstate confirms full exit from CA homeowners market',cls:'error'},
+    {date:'Feb 2024',event:'Farmers caps new policy applications in high-risk zip codes',cls:'warning'},
+    {date:'Apr 2024',event:'Nationwide/Crestbrook exit California personal lines',cls:'error'},
+    {date:'Jun 2024',event:'QBE Insurance withdraws from CA homeowners',cls:'error'},
+    {date:'Sep 2024',event:'FAIR Plan exposure crosses $400 billion — first CDI audit triggered',cls:'warning'},
+    {date:'Oct 2024',event:'McKinsey report: CA coverage gap $1.35T–$2T',cls:'error'},
+    {date:'Jan 2025',event:'LA County wildfires — $20.4B+ in insured claims',cls:'error'},
+    {date:'Feb 2025',event:'AmGUARD (Berkshire Hathaway) restricts NorCal new policies',cls:'warning'},
+    {date:'Mar 2025',event:'Liberty Mutual/Safeco exits CA condo and rental market',cls:'warning'},
+    {date:'Jun 2025',event:'E&S transactions hit 171,551 in H1 (+119% year-over-year)',cls:'success'},
+    {date:'Sep 2025',event:'CDI Regulation 23 requires 85% admitted market coverage for policy issuers',cls:'blue'},
+    {date:'Oct 2025',event:'Falls Lake, Tokio Marine restrict NorCal new business',cls:'warning'},
+    {date:'Feb 2026',event:'Surplus Line Assoc. confirms "permanent structural shift" to E&S',cls:'success'},
+    {date:'Mar 2026',event:'FAIR Plan exposure: $700B+ — 650,000 policyholders',cls:'error'},
+  ];
+  document.getElementById('timeline-list').innerHTML = timeline.map(t => `
+    <div style="display:flex;gap:var(--sp-3);padding:6px 0;border-bottom:1px solid var(--divider);align-items:flex-start">
+      <div style="font-size:.65rem;font-weight:700;color:var(--text-faint);min-width:68px;white-space:nowrap">${t.date}</div>
+      <div class="dot dot-${t.cls === 'error' ? 'red' : t.cls === 'success' ? 'green' : 'yellow'}" style="margin-top:5px"></div>
+      <div style="font-size:var(--text-xs)">${t.event}</div>
+    </div>`).join('');
+
+  const intel = [
+    {h:"The E&S Market IS the Admitted Market in NorCal Now",b:"This isn't a temporary workaround — E&S transactions are up 119% and the Surplus Line Association says it's permanent. Agents who master Burns & Wilcox, Lloyd's MGAs, and Palomar now are building a 10-year defensible book."},
+    {h:"CDI Regulation 23 Changes the Game (Sep 2025)",b:"Insurers must now write 85% of their statewide market share in high-risk areas or lose their non-renewal privileges. This FORCES carriers back in — creating a mid-term transition agents can front-run."},
+    {h:"FAIR Plan Has a Hidden Gap That Every Client Misses",b:"FAIR Plan doesn't cover liability, theft, additional living expenses, or water damage. A 'DIC' (Difference in Conditions) policy fills these gaps. You can write DIC on top of FAIR Plan. Almost NO agents are doing this — it's a wide-open market."},
+    {h:"Earthquake Insurance = The Unspoken Crisis",b:"CEA (CA Earthquake Authority) reports 75% of California homeowners have NO earthquake coverage. Post-fire rebuild zones are also seismically active. Bundle earthquake + fire gap = $3,000–$6,000 avg premium / policy."},
+    {h:"Premium Financing Unlocks Hard-to-Place Clients",b:"When E&S premiums run $8,000–$20,000+ for NorCal wildfire-zone properties, most clients can't pay upfront. Premium finance companies (AFCO, Imperial PFS, First Insurance Funding) make you the solution when competitors say 'I can't help you.'"},
+  ];
+  document.getElementById('intel-bullets').innerHTML = intel.map((b, i) => `
+    <div style="padding:var(--sp-4);border-radius:var(--r-md);background:var(--surface-offset);margin-bottom:var(--sp-3);border-left:3px solid var(--accent)">
+      <div style="font-family:var(--font-display);font-weight:800;font-size:var(--text-xs);color:var(--accent);margin-bottom:6px">${i + 1}. ${b.h}</div>
+      <div style="font-size:var(--text-xs);line-height:1.7;color:var(--text-muted)">${b.b}</div>
+    </div>`).join('');
+
+  const staying = ['Bamboo Insurance','Hippo Insurance','Mercury Insurance','Wawanesa','Openly / Homepoint','Branch Insurance','ICW Group','Palomar Holdings','GeoVera','Travelers (selective)','Hartford (commercial)','AAA/CSAA (members)','Cincinnati Financial','Burns & Wilcox (MGA)','Kin Insurance (entering 2025)','State Auto E&S','AmRisc',"Lloyd's (via MGAs)",'Palisades MGA'];
+  document.getElementById('staying-carriers').innerHTML = staying.map(c => `
+    <div style="display:flex;gap:var(--sp-2);align-items:center;padding:var(--sp-2) var(--sp-3);background:var(--surface-offset);border-radius:var(--r-md);border:1px solid var(--divider)">
+      <span class="dot dot-green"></span><span style="font-size:var(--text-xs);font-weight:600">${c}</span>
+    </div>`).join('');
+  lucide.createIcons();
+}
+
+// ═══════ SCRIPTS ═══════
+function scriptTab(t, el) {
+  document.querySelectorAll('#script-tabs .tab').forEach(x => x.classList.remove('active'));
+  document.querySelectorAll('[id^="script-panel-"]').forEach(x => x.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('script-panel-' + t).classList.add('active');
+}
+
+function renderScripts() {
+  document.getElementById('recruiting-scripts').innerHTML = [
+    {title:'The Carrier Crisis Opener (State Farm / Allstate / Farmers Agents)',you:"Hi [Name], this is [Your Name]. I'm a recruiter focused on the NorCal insurance market. I know your carrier recently halted or restricted new homeowners policies in California — I'm calling because that's created a significant opportunity, and I wanted to share it with you. Do you have three minutes?",note:"Works 100% for State Farm, Allstate, Nationwide agents. Opens with THEIR pain."},
+    {title:'The FAIR Plan Anger Call',you:"Hi [Name], I've been talking to a lot of agents in [County] lately who are losing clients to the FAIR Plan — and they're frustrated because they know those clients are paying double for half the coverage. We've put together a solution where agents in NorCal can actually compete again — admitted + E&S options that placed 47 wildfire-zone properties last month. Can I show you how?",note:"Target agents in Shasta, Butte, El Dorado, Lake, Nevada, Trinity counties."},
+    {title:'The 30-Second LinkedIn Message',you:"[Name] — I noticed you're an insurance professional in [County]. The NorCal market is completely restructuring right now (FAIR Plan at $700B, E&S up 119%) and the agents who move first are going to own the next decade of business here. I help agents get properly set up for what's coming. Would a 15-minute call this week be valuable to you?",note:"Use this for cold LinkedIn outreach. Keep it short. Let the hook do the work."},
+    {title:'The Referral Ask (From a New Recruit)',you:"[Name], now that you're set up with us — who are 2 or 3 agents in your network who are still stuck with carriers that aren't writing in NorCal? The best thing I can do for your former colleagues is get them the same access you now have. And there's a referral bonus if any of them join.",note:"Ask this in the first 30 days. Warm referrals from existing agents close at 60%+."},
+    {title:'The Experienced Agent Value Close',you:"[Name], you've built a [12-year] career and a [$X] book of business. The question isn't whether you're good — clearly you are. The question is whether your current carrier is giving you the platform, E&S access, and income ceiling that book deserves. Here's what I'd offer you: [contract terms]. What would it take to make this the right move for you?",note:"For high-experience agents (8+ years, $500K+ book). Lead with their value, not your pitch."},
+  ].map(s => `
+    <div class="script-card mb-3">
+      <div class="script-role">${s.title}</div>
+      <div class="script-text fw-700 mb-3">💬 What You Say:</div>
+      <div class="script-text" style="background:var(--surface);padding:var(--sp-3);border-radius:var(--r-md);border:1px solid var(--divider);line-height:1.8">"${s.you}"</div>
+      <div style="margin-top:var(--sp-3);padding:var(--sp-2) var(--sp-3);background:var(--gold-bg);border-radius:var(--r-sm);font-size:var(--text-xs);color:var(--gold);font-weight:600;border:1px solid rgba(234,179,8,0.15)">📝 ${s.note}</div>
+    </div>`).join('');
+
+  document.getElementById('prospecting-scripts').innerHTML = [
+    {title:'Cold Call — Property Owner in High-Risk Zip Code',you:"Hi [Name], my name is [Your Name] — I'm an insurance specialist who works specifically in NorCal. The reason I'm calling: your zip code is one of the areas where several major carriers have stopped writing homeowners coverage. I want to make sure you know what your options are before your renewal comes up — because a lot of people are waking up to find out they're on the FAIR Plan without realizing it. Do you have 5 minutes for me to walk you through where things stand?",note:"Works for zip codes 95601–95999 range (foothills, rural NorCal). Check FHSZ maps."},
+    {title:'Business Owner Prospecting (Commercial Lines)',you:"[Name], I work with business owners in [City] who are dealing with something I'm seeing more and more — commercial property carriers tightening their underwriting or non-renewing policies without much notice. I specialize in finding admitted and surplus line solutions that keep businesses covered when their primary carrier bails. Would it make sense to do a quick coverage audit just to make sure you're properly protected?",note:"Target chambers of commerce lists, Yelp/Google businesses, LinkedIn company pages in your county."},
+  ].map(s => `
+    <div class="script-card prospect mb-3">
+      <div class="script-role">${s.title}</div>
+      <div class="script-text fw-700 mb-3">💬 What You Say:</div>
+      <div class="script-text" style="background:var(--surface);padding:var(--sp-3);border-radius:var(--r-md);border:1px solid var(--divider);line-height:1.8">"${s.you}"</div>
+      <div style="margin-top:var(--sp-3);padding:var(--sp-2) var(--sp-3);background:var(--gold-bg);border-radius:var(--r-sm);font-size:var(--text-xs);color:var(--gold);font-weight:600;border:1px solid rgba(234,179,8,0.15)">📝 ${s.note}</div>
+    </div>`).join('');
+
+  const objections = [
+    {q:"I'm not looking to move right now",a:"I hear you — most of the agents I work with said the same thing before they realized their carrier was about to restrict their market. I'm not asking you to move today. I just want to make sure you have the right information when your situation does change. Can I send you one page on where the NorCal market is heading? No pressure."},
+    {q:"My carrier is State Farm / Allstate / Farmers — they're not that bad",a:"You're right that they're still paying existing claims. But here's the issue: when they stopped writing new homeowners policies in NorCal, they also stopped being a growth platform for you. Every new client who comes to you for home insurance — you have to say no or send them somewhere else. That means you're capping your income. Does that feel like a stable long-term situation to you?"},
+    {q:"I've been with my current carrier for X years",a:"That loyalty means something. And I'm not asking you to throw it away — I'm asking you to evaluate whether that loyalty is being returned. Has your carrier's exit from the NorCal market helped your income, or hurt it? We can structure a move that protects your existing book while opening up new business lines. What would you need to see to consider a conversation?"},
+    {q:"The E&S market feels risky / unstable",a:"I understand that perception. But here's what the data says: Surplus line transactions in California were up 119% in the first half of 2025. The Surplus Line Association of California has called this a 'permanent structural shift.' The agents who said 'it feels risky' in 2023 are now the ones losing clients to the agents who leaned in. E&S IS the market now."},
+    {q:"What's your commission structure?",a:"Great question — that's exactly what I want to walk through with you because it depends on your book size and lines of business. What I can tell you is that agents I've moved in the last 12 months have seen income increases of 25–40% because they went from one carrier to multi-carrier access including E&S. Can I put together a personalized model for you?"},
+    {q:"I don't have time for a meeting",a:"Totally fair — let me be the most efficient use of 12 minutes of your week. I'll send you a one-page summary of where your county stands, which carriers are still writing, and what your options look like. If it's not relevant, trash it. If it is, we'll schedule 12 minutes. Fair enough?"},
+    {q:"I have a non-solicit agreement",a:"I respect that completely — let's keep this 100% above board. I'm not asking you to take your book anywhere or violate any agreement. I'm just having a conversation about the market. When your non-solicit expires, I want to be the first call you make. Can I stay in touch quarterly?"},
+  ];
+  document.getElementById('objection-scripts').innerHTML = `<div class="alert alert-info mb-4"><i data-lucide="lightbulb" size="14" style="flex-shrink:0"></i><div class="alert-content"><div class="alert-title">PRO TIP: Never argue. Always redirect.</div><p>Every objection is information about what the prospect actually cares about. Your job is to listen, validate, and redirect to their underlying pain — which is almost always: limited markets, declining income, or stuck clients.</p></div></div>` + objections.map(o => `
+    <div class="objection-item">
+      <div class="objection-header" onclick="toggleObj(this)">
+        <span>🙅 "${o.q}"</span><i data-lucide="chevron-down" size="14"></i>
+      </div>
+      <div class="objection-body"><strong>Your Response:</strong><br><br>"${o.a}"</div>
+    </div>`).join('');
+
+  document.getElementById('followup-scripts').innerHTML = [
+    {title:'24-Hour Post-Call Email',sub:'Subject: [Your name] — NorCal carrier intel I promised',body:`Hi [Name],
+
+Great speaking today. As promised — here's the one-page breakdown:
+
+• State Farm, Allstate, Nationwide & Farmers have all restricted or exited NorCal homeowners
+• FAIR Plan exposure is now $700B — up 5x since 2020
+• E&S transactions up 119% in 2025 — agents with this access are writing business you can't touch without it
+• Bamboo Insurance, Hippo, Wawanesa, Palomar MGA, Burns & Wilcox — these are the carriers still writing in your territory
+
+I'd love to show you a specific model for [their county]. Available for 15 min Thursday or Friday?
+
+[Your Name]`},
+    {title:'7-Day Follow-Up (No Response)',sub:'Subject: Quick update — [their carrier] + NorCal',body:`Hi [Name],
+
+Following up from last week. I know timing wasn't right.
+
+One thing I wanted to flag: [their carrier] just [recent news item — e.g., "restricted new applications in your county zip codes"]. I don't want to be the bearer of bad news, but I'd rather you hear it from me now than from a non-renewal notice later.
+
+If you have 10 minutes this week, I can show you what your options look like. If not, I completely understand — I'll check back in 30 days.
+
+Best,
+[Your Name]`},
+    {title:'30-Day Re-Engagement',sub:'Subject: Something new worth your 5 minutes',body:`Hi [Name],
+
+Last time we talked, timing wasn't right. I get it.
+
+But I wanted to send you something that came up this week: [specific new carrier entry / rate change / regulation update]. This directly affects agents in [their county].
+
+I think the market is approaching an inflection point — agents who move in the next 90 days will be 18 months ahead of the wave. I'd love 15 minutes to show you what I'm seeing.
+
+[Your Name]`},
+  ].map(t => `
+    <div class="script-card agent mb-3">
+      <div class="script-role">${t.title}</div>
+      <div style="font-size:var(--text-xs);font-weight:700;color:var(--text-muted);margin-bottom:var(--sp-2)">${t.sub}</div>
+      <div class="script-text" style="background:var(--surface);padding:var(--sp-3);border-radius:var(--r-md);border:1px solid var(--divider);line-height:1.8;white-space:pre-line">${t.body}</div>
+    </div>`).join('');
+  lucide.createIcons();
+}
+
+function toggleObj(el) {
+  const body = el.nextElementSibling;
+  body.classList.toggle('open');
+  lucide.createIcons();
+}
+
+// ═══════ DAILY GAME PLAN ═══════
+let dailyTasks = {};
+function renderDaily() {
+  const d = new Date();
+  document.getElementById('today-date').textContent = d.toLocaleDateString('en-US', {weekday:'long', year:'numeric', month:'long', day:'numeric'});
+  const morning = [
+    'Review your pipeline and identify top 3 call targets',
+    'Check for any carrier news / CDI bulletins overnight',
+    'Pull FHSZ map for today\'s target county zip codes',
+    'Prep your carrier comparison one-pager for appointments',
+    'Confirm today\'s appointments (calendar + text reminder)',
+    'Review any objections you got yesterday — prep counters',
+  ];
+  const calls = [
+    'Cold calls: 10 target agents in priority county',
+    'LinkedIn messages: 5 Allstate/State Farm/Farmers agents',
+    'Follow up on all prospects who are 3+ days without contact',
+    'Email FAIR Plan one-pager to 3 warm leads from last week',
+    'Call back any voicemails from prior week',
+    'Text 2 warm prospects to confirm this week\'s calendar',
+  ];
+  const afternoon = [
+    'Appointment 1: present carrier options + income model',
+    'Appointment 2: discovery call (listen for pain points)',
+    'Drop-in on local independent agency in target area',
+    'Connect with at least 1 commercial agent (referral source)',
+    'Document all meetings in pipeline before end of day',
+    'Identify 3 new prospects to add to pipeline from today\'s activity',
+  ];
+  const evening = [
+    'Update pipeline status for every contact made today',
+    'Send follow-up emails within 2 hours of each appointment',
+    'Set calendar for tomorrow — book minimum 2 appointments',
+    'Review county opportunity scores — shift focus if needed',
+    'Log wins: what worked, what to try differently tomorrow',
+    'Add new prospects discovered today to database',
+  ];
+  renderChecklist('morning-checklist', 'morning', morning);
+  renderChecklist('morning-calls-checklist', 'calls', calls);
+  renderChecklist('afternoon-checklist', 'afternoon', afternoon);
+  renderChecklist('evening-checklist', 'evening', evening);
+  updateProgress();
+
+  const unknowns = [
+    {h:'DIC (Difference in Conditions) Policies',b:'Almost no agents in NorCal are writing Difference in Conditions policies on top of FAIR Plan. A DIC covers what FAIR Plan doesn\'t — liability, water, theft, ALE. This is a $2,000–$5,000 add-on sale that solves a massive client problem. Burns & Wilcox, Novamar, and Aegis all offer DIC in CA.'},
+    {h:'Premium Finance as a Closing Tool',b:'When your E&S policy quote comes back at $12,000 for a wildfire-zone property, clients freeze. Premium financing (AFCO, Imperial PFS, First Insurance Funding) lets them pay monthly. This turns a $0 deal into a $12,000 commission year. Almost none of your competing agents offer this.'},
+    {h:'CEA Earthquake Bundling',b:'75% of NorCal homeowners have zero earthquake coverage. The CA Earthquake Authority (CEA) pays agent commissions. A FAIR Plan client who also buys a CEA earthquake policy = you double the premium, double the commission, and provide dramatically more protection. This is your two-call strategy.'},
+    {h:'CDI Regulation 23 — Coming Boom',b:'California\'s Department of Insurance passed Regulation 23 in 2024, requiring carriers to write in FHSZ areas proportional to their statewide market share. As carriers begin re-entering the market to comply (2025–2027), agents already embedded in those territories will get first look. Position yourself NOW.'},
+    {h:'Agent Database Strategy',b:'The CA Department of Insurance publishes a public database of all licensed agents by zip code, license type, and carrier appointment. You can download this at insurance.ca.gov. Filter by "property and casualty" + county = instant cold call list of every licensed agent in your territory.'},
+    {h:'Google Reviews as Recruiting Intel',b:'Search "insurance agent [city] NorCal" on Google. Look for agents with negative reviews citing "couldn\'t help me find coverage" or "sent me to FAIR Plan." These agents are publicly demonstrating the exact pain you solve. Call them — they\'re your best recruits.'},
+    {h:'Association Partnerships = 100 at Once',b:'The NorCal Association of Realtors, local home builder associations, and county farm bureaus all have agent members who need insurance solutions urgently. A single speaking slot at a local realtor association meeting = 50–200 direct contacts in 45 minutes. More leverage than 200 cold calls.'},
+  ];
+  document.getElementById('unknown-unknowns').innerHTML = unknowns.map((u, i) => `
+    <div style="padding:var(--sp-4);border-radius:var(--r-md);background:var(--surface-offset);margin-bottom:var(--sp-3);border-left:3px solid var(--accent)">
+      <div style="font-family:var(--font-display);font-weight:800;font-size:var(--text-xs);margin-bottom:6px">${i + 1}. ${u.h}</div>
+      <div style="font-size:var(--text-xs);line-height:1.7;color:var(--text-muted)">${u.b}</div>
+    </div>`).join('');
+  lucide.createIcons();
+}
+
+function renderChecklist(id, group, tasks) {
+  document.getElementById(id).innerHTML = tasks.map((t, i) => {
+    const key = group + '_' + i;
+    const checked = dailyTasks[key] || false;
+    return `<div class="checklist-item">
+      <div class="check-box ${checked ? 'checked' : ''}" onclick="toggleCheck('${key}',this)">
+        ${checked ? '<svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' : ''}
+      </div>
+      <span class="checklist-text ${checked ? 'done' : ''}">${t}</span>
+    </div>`;
+  }).join('');
+}
+
+function toggleCheck(key, el) {
+  dailyTasks[key] = !dailyTasks[key];
+  el.classList.toggle('checked');
+  el.innerHTML = dailyTasks[key] ? '<svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' : '';
+  el.nextElementSibling.classList.toggle('done');
+  updateProgress();
+  showToast(dailyTasks[key] ? '✅ Task complete!' : 'Task unchecked');
+}
+
+function updateProgress() {
+  const total = 24; // 6 tasks × 4 time blocks = 24
+  const done = Object.values(dailyTasks).filter(Boolean).length;
+  const pct = Math.round((done / total) * 100);
+  const bar = document.getElementById('daily-progress-bar');
+  const pctEl = document.getElementById('progress-pct');
+  if (bar) { bar.style.width = pct + '%'; bar.className = 'progress-fill ' + (pct < 40 ? 'orange' : pct < 75 ? '' : 'green'); }
+  if (pctEl) pctEl.textContent = pct + '%';
+  const lbl = document.getElementById('progress-label');
+  if (lbl) lbl.textContent = done + ' of ' + total + ' tasks complete';
+  const status = document.getElementById('progress-status');
+  if (status) status.textContent = pct === 100 ? '🎉 Day Complete!' : pct >= 75 ? '💪 Almost there!' : pct >= 50 ? '📈 Good momentum' : pct >= 25 ? '⚡ Keep pushing' : '🚀 Let\'s go!';
+}
+
+function resetDaily() { dailyTasks = {}; renderDaily(); showToast('🔄 Day reset'); }
+
+// ═══════ INCOME CALCULATOR ═══════
+function calcIncome() {
+  const agents = parseFloat(document.getElementById('calc-agents').value) || 0;
+  const premium = parseFloat(document.getElementById('calc-premium').value) || 0;
+  const override = parseFloat(document.getElementById('calc-override').value) || 0;
+  const months = parseFloat(document.getElementById('calc-months').value) || 12;
+  document.getElementById('calc-months-label').textContent = months;
+  const monthlyPerAgent = premium * (override / 100);
+  const agentsCumulative = agents * months;
+  const totalMonthly = agentsCumulative * monthlyPerAgent;
+  const yr1Monthly = (agents * (months / 12)) * monthlyPerAgent;
+  document.getElementById('calc-results').innerHTML = `
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-3)">
+      ${[['Monthly Override/Agent','$' + fmt(monthlyPerAgent),'primary'],['Active Agents at Month ' + months, fmt(agentsCumulative),''],['Monthly Override Income','$' + fmt(yr1Monthly),'success'],['Total ' + months + '-Mo Override','$' + fmt(agents * months * monthlyPerAgent),'accent']].map(([l, v, c]) => `
+        <div style="background:var(--surface-offset);border-radius:var(--r-md);padding:var(--sp-4);text-align:center;border:1px solid var(--divider)">
+          <div style="font-size:.6rem;color:var(--text-muted);margin-bottom:6px;text-transform:uppercase;font-weight:700;letter-spacing:.05em">${l}</div>
+          <div style="font-family:var(--font-display);font-size:1.3rem;font-weight:800;font-variant-numeric:tabular-nums;${c ? 'color:var(--' + c + ')' : ''}">${v}</div>
+        </div>`).join('')}
+    </div>`;
+}
+
+function calcAgentIncome() {
+  const book = parseFloat(document.getElementById('agent-book').value) || 0;
+  const comm = parseFloat(document.getElementById('agent-comm').value) || 0;
+  const ret = parseFloat(document.getElementById('agent-retention').value) || 0;
+  const y1 = book * (comm / 100);
+  const y2 = (book * (ret / 100)) * (comm / 100) + (book * 0.2) * (comm / 100);
+  const y3 = y2 * 1.15;
+  document.getElementById('agent-results').innerHTML = `
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--sp-3)">
+      ${[['Year 1','$' + fmt(y1),''],['Year 2 (Renewals)','$' + fmt(y2),'success'],['Year 3 (Growth)','$' + fmt(y3),'accent']].map(([l, v, c]) => `
+        <div style="background:var(--surface-offset);border-radius:var(--r-md);padding:var(--sp-4);text-align:center;border:1px solid var(--divider)">
+          <div style="font-size:.6rem;color:var(--text-muted);margin-bottom:6px;font-weight:700;text-transform:uppercase;letter-spacing:.05em">${l}</div>
+          <div style="font-family:var(--font-display);font-size:1.2rem;font-weight:800;font-variant-numeric:tabular-nums;${c ? 'color:var(--' + c + ')' : ''}">${v}</div>
+        </div>`).join('')}
+    </div>
+    <div style="margin-top:var(--sp-4);padding:var(--sp-3);background:var(--primary-highlight);border-radius:var(--r-md);border:1px solid rgba(59,130,246,0.15)">
+      <div style="font-size:var(--text-xs);color:var(--primary);font-weight:700">📈 NorCal Premium Uplift: With 22–34% rate increases, the same policy count generates ${Math.round(22 + (book / 500000) * 8)}–${Math.round(28 + (book / 500000) * 6)}% more commission without writing a single new policy.</div>
+    </div>`;
+}
+
+function fmt(n) { return Math.round(n).toLocaleString(); }
+
+// ═══════ TERRITORY ═══════
+function renderTerritory() {
+  const counties = [
+    {n:'Shasta',fire:'Extreme',access:'❌ State Farm/Farmers halted',fair:'38%',prem:'+41%',score:99,best:'Displaced carrier agents, FAIR Plan clients'},
+    {n:'Trinity',fire:'Extreme',access:'❌ Most carriers out',fair:'41%',prem:'+45%',score:98,best:'E&S specialist agents, wildfire mitigation-certified'},
+    {n:'Butte',fire:'Extreme',access:'❌ Limited admitted',fair:'35%',prem:'+39%',score:97,best:'Post-Camp Fire agents w/local trust, rebuild specialists'},
+    {n:'Lake',fire:'Very High',access:'❌ Minimal private',fair:'36%',prem:'+42%',score:96,best:'Independent agents, FAIR Plan bridge agents'},
+    {n:'El Dorado',fire:'Very High',access:'⚠️ E&S dominant',fair:'28%',prem:'+34%',score:95,best:'Foothill community agents, Tahoe adjacent HNW'},
+    {n:'Siskiyou',fire:'Very High',access:'⚠️ Limited',fair:'33%',prem:'+38%',score:93,best:'Rural lifestyle agents, farm bureau connections'},
+    {n:'Nevada',fire:'Very High',access:'⚠️ E&S needed',fair:'31%',prem:'+36%',score:94,best:'Grass Valley/Auburn agents with wildfire-zone books'},
+    {n:'Mendocino',fire:'High',access:'⚠️ Limited',fair:'30%',prem:'+35%',score:91,best:'Coastal + inland dual-market agents'},
+    {n:'Tehama',fire:'High',access:'⚠️ Selective',fair:'25%',prem:'+29%',score:89,best:'Agricultural + ranch property agents'},
+    {n:'Sonoma',fire:'High',access:'⚠️ Partial',fair:'22%',prem:'+27%',score:88,best:'Allstate/Nationwide agents affected by carrier exits'},
+    {n:'Glenn',fire:'Moderate-High',access:'⚠️ Selective',fair:'19%',prem:'+22%',score:82,best:'Agricultural agents, rice-country property specialists'},
+    {n:'Napa',fire:'High',access:'⚠️ Partial',fair:'18%',prem:'+24%',score:84,best:'Wine industry commercial accounts, high-value property'},
+    {n:'Humboldt',fire:'Moderate',access:'⚠️ Partial',fair:'15%',prem:'+18%',score:76,best:'Timber/agricultural commercial, coastal lifestyle'},
+    {n:'Placer',fire:'Moderate-High',access:'⚠️ Partial',fair:'14%',prem:'+19%',score:79,best:'Sierra foothills agents; strong personal + commercial mix'},
+    {n:'Sacramento',fire:'Moderate',access:'✅ Better access',fair:'8%',prem:'+15%',score:72,best:'Commercial specialists, high-volume personal lines'},
+    {n:'Yolo',fire:'Low-Mod',access:'✅ Available',fair:'7%',prem:'+12%',score:68,best:'UC Davis corporate accounts, agriculture commercial'},
+    {n:'Solano',fire:'Low',access:'✅ Available',fair:'5%',prem:'+11%',score:64,best:'Bay Area commuter community agents'},
+    {n:'Alameda',fire:'Low',access:'✅ Available',fair:'5%',prem:'+12%',score:65,best:'Commercial BOP agents, tech industry groups'},
+    {n:'Contra Costa',fire:'Low-Mod',access:'✅ Available',fair:'6%',prem:'+13%',score:67,best:'Mid-market commercial, suburban personal lines'},
+    {n:'Marin',fire:'Moderate',access:'⚠️ Selective',fair:'10%',prem:'+21%',score:77,best:'HNW personal lines, fire hardening consultants'},
+    {n:'Santa Clara',fire:'Low',access:'✅ Available',fair:'4%',prem:'+11%',score:63,best:'Tech company group benefits, commercial D&O'},
+    {n:'Colusa',fire:'Moderate',access:'⚠️ Selective',fair:'16%',prem:'+20%',score:78,best:'Agricultural commercial, orchard property specialists'},
+  ];
+  document.getElementById('territory-table-body').innerHTML = counties.sort((a, b) => b.score - a.score).map(c => `
+    <tr>
+      <td style="font-weight:700">${c.n}</td>
+      <td><span class="badge badge-${c.fire === 'Extreme' ? 'error' : c.fire === 'Very High' ? 'warning' : c.fire === 'High' ? 'gold' : 'neutral'}">${c.fire}</span></td>
+      <td style="font-size:var(--text-xs)">${c.access}</td>
+      <td style="font-variant-numeric:tabular-nums;font-weight:600">${c.fair}</td>
+      <td style="color:var(--error);font-weight:700">${c.prem}</td>
+      <td>${scoreBadge(c.score)}</td>
+      <td style="font-size:var(--text-xs);color:var(--text-muted)">${c.best}</td>
+    </tr>`).join('');
+
+  document.getElementById('county-strategy').innerHTML = [
+    {tier:'Tier 1 — Maximum Urgency (Score 90+)',desc:'Shasta, Trinity, Butte, Lake, El Dorado, Nevada, Siskiyou',action:'Lead with FAIR Plan crisis. Approach State Farm/Farmers agents directly. E&S access is your primary pitch. Every call, every day.',cls:'error'},
+    {tier:'Tier 2 — High Opportunity (Score 75–89)',desc:'Sonoma, Mendocino, Tehama, Marin, Napa, Humboldt, Placer, Colusa',action:'Carrier exit frustration is your opener. Mix personal + commercial. Independent agents seeking admitted+E&S access = top prospect.',cls:'warning'},
+    {tier:'Tier 3 — Steady Growth (Score 60–74)',desc:'Sacramento, Alameda, Contra Costa, Yolo, Solano, Santa Clara',action:'Commercial focus. FAIR Plan pitch is less relevant but premium increases are still your hook. Life+Health cross-sell opportunities high.',cls:'blue'},
+  ].map(t => `
+    <div style="padding:var(--sp-4);border-radius:var(--r-md);background:var(--surface-offset);margin-bottom:var(--sp-3);border-left:3px solid var(--${t.cls === 'blue' ? 'primary' : t.cls})">
+      <div style="font-family:var(--font-display);font-weight:800;font-size:var(--text-xs);margin-bottom:4px">${t.tier}</div>
+      <div style="font-size:var(--text-xs);color:var(--text-muted);margin-bottom:6px">Counties: ${t.desc}</div>
+      <div style="font-size:var(--text-xs)"><strong>Strategy:</strong> ${t.action}</div>
+    </div>`).join('');
+}
+
+// ═══════ PROSPECT CRUD ═══════
+function openAddProspect() {
+  editingId = null;
+  document.getElementById('modal-prospect-title').textContent = 'Add Prospect';
+  document.getElementById('prospect-form').reset();
+  openModal('add-prospect-modal');
+}
+
+function editProspect(id) {
+  editingId = id;
+  const p = prospects.find(x => x.id === id);
+  if (!p) return;
+  document.getElementById('modal-prospect-title').textContent = 'Edit Prospect';
+  document.getElementById('p-name').value = p.name;
+  document.getElementById('p-phone').value = p.phone || '';
+  document.getElementById('p-email').value = p.email || '';
+  document.getElementById('p-county').value = p.county;
+  document.getElementById('p-type').value = p.type;
+  document.getElementById('p-carrier').value = p.carrier || '';
+  document.getElementById('p-stage').value = p.stage;
+  document.getElementById('p-experience').value = p.experience || 0;
+  document.getElementById('p-book').value = p.book || '';
+  document.getElementById('p-notes').value = p.notes || '';
+  openModal('add-prospect-modal');
+}
+
+function saveProspect(e) {
+  e.preventDefault();
+  const p = {
+    id: editingId || nextId++,
+    name: document.getElementById('p-name').value,
+    phone: document.getElementById('p-phone').value,
+    email: document.getElementById('p-email').value,
+    county: document.getElementById('p-county').value,
+    type: document.getElementById('p-type').value,
+    carrier: document.getElementById('p-carrier').value,
+    stage: document.getElementById('p-stage').value,
+    experience: parseInt(document.getElementById('p-experience').value) || 0,
+    book: parseInt(document.getElementById('p-book').value) || 0,
+    notes: document.getElementById('p-notes').value,
+    score: Math.min(99, 50 + Math.floor(Math.random() * 40)),
+  };
+  if (editingId) { const i = prospects.findIndex(x => x.id === editingId); if (i > -1) prospects[i] = p; }
+  else prospects.push(p);
+  closeModal('add-prospect-modal');
+  renderProspects(); renderPipeline(); renderDashboard();
+  showToast(editingId ? '✅ Prospect updated!' : '🎉 Prospect added!');
+  editingId = null;
+}
+
+function deleteProspect(id) {
+  if (!confirm('Remove this prospect?')) return;
+  prospects = prospects.filter(p => p.id !== id);
+  renderProspects(); renderPipeline(); renderDashboard();
+  showToast('🗑️ Prospect removed');
+}
+
+function openDetail(id) {
+  const p = prospects.find(x => x.id === id);
+  if (!p) return;
+  document.getElementById('detail-name').textContent = p.name;
+  document.getElementById('prospect-detail-body').innerHTML = `
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-3);margin-bottom:var(--sp-4)">
+      ${[['County', p.county],['Lines', p.type],['Carrier/Agency', p.carrier || '—'],['Stage', stageBadge(p.stage)],['Experience', p.experience + ' years'],['Book Size', p.book ? '$' + p.book.toLocaleString() : '—'],['Phone', p.phone || '—'],['Email', p.email || '—']].map(([l, v]) => `
+        <div style="background:var(--surface-offset);padding:var(--sp-3);border-radius:var(--r-md);border:1px solid var(--divider)">
+          <div style="font-size:.6rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px">${l}</div>
+          <div style="font-size:var(--text-xs);font-weight:600">${v}</div>
+        </div>`).join('')}
+    </div>
+    <div style="display:flex;align-items:center;gap:var(--sp-3);margin-bottom:var(--sp-4)">
+      <span style="font-size:var(--text-xs);font-weight:700;color:var(--text-muted)">Opportunity Score:</span>
+      ${scoreBadge(p.score)}
+    </div>
+    ${p.notes ? `<div style="background:var(--surface-offset);padding:var(--sp-4);border-radius:var(--r-md);margin-bottom:var(--sp-4);border:1px solid var(--divider)"><div style="font-size:.6rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px">Notes / Pain Points</div><div style="font-size:var(--text-xs);line-height:1.8">${p.notes}</div></div>` : ''}
+    <div style="background:var(--primary-highlight);padding:var(--sp-4);border-radius:var(--r-md);margin-bottom:var(--sp-4);border:1px solid rgba(59,130,246,0.15)">
+      <div style="font-size:.6rem;font-weight:800;color:var(--primary);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px">🎯 Recommended Talk Track</div>
+      <div style="font-size:var(--text-xs);line-height:1.8">${getTalkTrack(p)}</div>
+    </div>
+    <div style="display:flex;gap:var(--sp-3);flex-wrap:wrap">
+      <button class="btn btn-accent" onclick="advanceStage(${p.id})"><i data-lucide="arrow-right" size="13"></i>Advance Stage</button>
+      <button class="btn btn-ghost" onclick="closeModal('prospect-detail-modal');editProspect(${p.id})"><i data-lucide="edit-2" size="13"></i>Edit</button>
+      <select class="form-input" style="width:auto" onchange="changeStage(${p.id},this.value)">
+        ${stages.map(s => `<option value="${s}" ${p.stage === s ? 'selected' : ''}>${s}</option>`).join('')}
+      </select>
+    </div>`;
+  openModal('prospect-detail-modal');
+  lucide.createIcons();
+}
+
+function getTalkTrack(p) {
+  const tracks = {
+    'State Farm':'Lead with: "State Farm has halted ALL new homeowners in California since 2023. I have access to Bamboo, Hippo, Wawanesa, and E&S markets through Burns & Wilcox. Your clients don\'t have to go to FAIR Plan."',
+    'Allstate':'Open with: "Allstate has completely exited CA homeowners. Every homeowner you wrote is now a liability — they\'ll get non-renewed. I can show you how to retain that book through alternative markets before the non-renewals hit."',
+    'Farmers':'Say: "Farmers has capped new applications in NorCal fire risk zones. You\'re essentially trapped — you can\'t grow. I have carriers actively writing in your county right now."',
+    'Nationwide':'Lead with: "Nationwide/Crestbrook exited CA personal lines entirely. Let\'s talk about how to move your book to a platform that isn\'t abandoning California."',
+  };
+  for (const [carrier, track] of Object.entries(tracks)) {
+    if (p.carrier && p.carrier.toLowerCase().includes(carrier.toLowerCase())) return track;
+  }
+  if (p.type === 'Commercial Lines') return 'Focus on commercial coverage gaps — especially WC, BOP, and commercial property in wildfire-adjacent zones. ICW, Travelers, and Hartford all still actively writing. Premium increases = higher commissions for same book.';
+  if (p.type === 'Life & Health') return 'Bridge from L&H into P&C cross-selling. Their client relationships are warm — adding auto + home (or commercial BOP) to a life client is a natural expansion. Focus on bundling and premium financing for high-net-worth clients.';
+  return 'Lead with the FAIR Plan crisis and carrier exits in their county. Offer to run a free coverage audit showing what they\'re missing. Use E&S access as your differentiator.';
+}
+
+function advanceStage(id) {
+  const p = prospects.find(x => x.id === id);
+  if (!p) return;
+  const i = stages.indexOf(p.stage);
+  if (i < stages.length - 1) { p.stage = stages[i + 1]; showToast('↗️ Moved to ' + p.stage); }
+  else showToast('Already at final stage');
+  closeModal('prospect-detail-modal');
+  renderProspects(); renderPipeline(); renderDashboard();
+}
+
+function changeStage(id, stage) {
+  const p = prospects.find(x => x.id === id);
+  if (p) { p.stage = stage; renderProspects(); renderPipeline(); renderDashboard(); showToast('Stage updated to ' + stage); }
+}
+
+// ═══════ MODAL UTILS ═══════
+function openModal(id) { document.getElementById(id).classList.add('open'); }
+function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+document.addEventListener('click', e => { if (e.target.classList.contains('modal-overlay')) e.target.classList.remove('open'); });
+
+// ═══════ TOAST ═══════
+function showToast(msg) {
+  const c = document.getElementById('toast-container');
+  const t = document.createElement('div');
+  t.className = 'toast'; t.textContent = msg;
+  c.appendChild(t);
+  setTimeout(() => { t.style.animation = 'toastOut .3s ease forwards'; setTimeout(() => t.remove(), 300); }, 2500);
+}
+
+// ═══════ DARK/LIGHT MODE ═══════
+(function() {
+  const btn = document.getElementById('theme-toggle');
+  const r = document.documentElement;
+  let d = r.getAttribute('data-theme') || 'dark';
+  r.setAttribute('data-theme', d);
+  if (btn) btn.addEventListener('click', () => {
+    d = d === 'dark' ? 'light' : 'dark';
+    r.setAttribute('data-theme', d);
+  });
+})();
+
+// ═══════ INIT ═══════
+document.addEventListener('DOMContentLoaded', () => {
+  lucide.createIcons();
+  renderDashboard();
+});
+</script>
+</body>
+</html>
