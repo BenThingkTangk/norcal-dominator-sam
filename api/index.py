@@ -41,16 +41,24 @@ def call_claude(system: str, messages: list, max_tokens: int = 2048):
     if not api_key:
         return JSONResponse(content={"error": "ANTHROPIC_API_KEY not set"}, status_code=500)
     client = Anthropic(api_key=api_key)
-    try:
-        response = client.messages.create(
-            model="claude-sonnet-4-20250514",
-            max_tokens=max_tokens,
-            system=system,
-            messages=messages,
-        )
-        return JSONResponse(content={"text": response.content[0].text})
-    except Exception as e:
-        return JSONResponse(content={"error": str(e)}, status_code=500)
+    # Try models in order of preference
+    models = ["claude-sonnet-4-20250514", "claude-3-5-sonnet-20241022", "claude-3-haiku-20240307"]
+    last_error = None
+    for model in models:
+        try:
+            response = client.messages.create(
+                model=model,
+                max_tokens=max_tokens,
+                system=system,
+                messages=messages,
+            )
+            return JSONResponse(content={"text": response.content[0].text})
+        except Exception as e:
+            last_error = str(e)
+            if "credit balance" not in last_error and "model" not in last_error.lower():
+                break  # Non-model/billing error, don't retry
+            continue
+    return JSONResponse(content={"error": last_error}, status_code=500)
 
 @app.post("/api/chat")
 async def chat(req: ChatRequest):
