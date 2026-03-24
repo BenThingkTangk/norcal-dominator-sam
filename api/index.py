@@ -1,7 +1,7 @@
 """NorCal Insurance Dominator — Vercel Serverless FastAPI Backend.
 All AI endpoints for the Objection Handler, Pitch Generator, and Market Intel Agent."""
 
-import json, os
+import json, os, traceback
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse, JSONResponse
@@ -16,7 +16,10 @@ app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], all
 
 def get_client():
     from anthropic import Anthropic
-    return Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    if not api_key:
+        raise ValueError("ANTHROPIC_API_KEY environment variable is not set")
+    return Anthropic(api_key=api_key)
 
 # ═══════ REQUEST MODELS ═══════
 class ChatRequest(BaseModel):
@@ -44,18 +47,47 @@ class IntelRequest(BaseModel):
 
 # ═══════ STREAMING HELPER ═══════
 def stream_anthropic(system: str, messages: list, max_tokens: int = 2048):
-    client = get_client()
     def generate():
-        with client.messages.stream(
+        try:
+            client = get_client()
+            with client.messages.stream(
+                model="claude-sonnet-4-20250514",
+                max_tokens=max_tokens,
+                system=system,
+                messages=messages,
+            ) as stream:
+                for text in stream.text_stream:
+                    yield f"data: {json.dumps({'text': text})}\n\n"
+            yield "data: [DONE]\n\n"
+        except Exception as e:
+            error_msg = f"Error: {str(e)}"
+            yield f"data: {json.dumps({'text': error_msg})}\n\n"
+            yield "data: [DONE]\n\n"
+    return StreamingResponse(generate(), media_type="text/event-stream")
+
+# ═══════ NON-STREAMING FALLBACK (for debugging) ═══════
+def call_anthropic(system: str, messages: list, max_tokens: int = 2048):
+    try:
+        client = get_client()
+        response = client.messages.create(
             model="claude-sonnet-4-20250514",
             max_tokens=max_tokens,
             system=system,
             messages=messages,
-        ) as stream:
-            for text in stream.text_stream:
-                yield f"data: {json.dumps({'text': text})}\n\n"
-        yield "data: [DONE]\n\n"
-    return StreamingResponse(generate(), media_type="text/event-stream")
+        )
+        text = response.content[0].text
+        # Return as SSE chunks for frontend compatibility
+        def generate():
+            chunk_size = 100
+            for i in range(0, len(text), chunk_size):
+                yield f"data: {json.dumps({'text': text[i:i+chunk_size]})}\n\n"
+            yield "data: [DONE]\n\n"
+        return StreamingResponse(generate(), media_type="text/event-stream")
+    except Exception as e:
+        def error_gen():
+            yield f"data: {json.dumps({'text': f'Error: {str(e)}'})}\n\n"
+            yield "data: [DONE]\n\n"
+        return StreamingResponse(error_gen(), media_type="text/event-stream")
 
 # ═══════ STREAMING CHAT ═══════
 @app.post("/api/chat")
@@ -63,7 +95,7 @@ async def chat_stream(req: ChatRequest):
     system = SYSTEM_PROMPT_BASE
     if req.system_context:
         system += "\n\nADDITIONAL CONTEXT:\n" + req.system_context
-    return stream_anthropic(system, req.messages)
+    return call_anthropic(system, req.messages)
 
 # ═══════ PITCH GENERATOR ═══════
 @app.post("/api/pitch")
@@ -92,16 +124,16 @@ PROSPECT PROFILE:
 {"CARRIER INTEL: " + json.dumps(carrier_data) if carrier_data else ""}
 
 Generate a pitch with these sections:
-1. **OPENING HOOK** — A bold, personalized opening line that references their specific situation. Maximum 2 sentences.
-2. **PAIN AMPLIFICATION** — 2-3 sentences with specific data (FAIR Plan numbers, carrier restrictions, market trends in their county).
+1. **OPENING HOOK** — A bold, personalized opening line. Maximum 2 sentences.
+2. **PAIN AMPLIFICATION** — 2-3 sentences with specific data.
 3. **THE BRIDGE** — What you offer that solves their specific problem.
-4. **SOCIAL PROOF** — A brief reference to other agents in similar situations who've made the move.
+4. **SOCIAL PROOF** — Brief reference to other agents who've moved.
 5. **CALL TO ACTION** — A specific, time-bounded next step.
-6. **EMOTIONAL INTELLIGENCE NOTES** — Brief coaching notes on tone, pacing, and emotional triggers.
+6. **EMOTIONAL INTELLIGENCE NOTES** — Coaching notes on tone and triggers.
 
 Be specific. Use real data. No generic fluff."""
 
-    return stream_anthropic(SYSTEM_PROMPT_BASE, [{"role": "user", "content": pitch_prompt}])
+    return call_anthropic(SYSTEM_PROMPT_BASE, [{"role": "user", "content": pitch_prompt}])
 
 # ═══════ OBJECTION HANDLER ═══════
 @app.post("/api/objection")
@@ -115,15 +147,15 @@ OBJECTION: "{req.objection}"
 Generate a powerful response with:
 
 1. **ACKNOWLEDGE** — Show you heard them (1 sentence, empathetic)
-2. **REFRAME** — Flip the objection into an opportunity using specific data (2-3 sentences with real CA insurance market data)
-3. **WORD-FOR-WORD REBUTTAL** — The exact words to say right now, in quotes, conversational tone
-4. **FOLLOW-UP QUESTION** — A strategic question that keeps the conversation going
-5. **EMOTIONAL READ** — What they're really feeling underneath this objection
+2. **REFRAME** — Flip the objection using specific data (2-3 sentences)
+3. **WORD-FOR-WORD REBUTTAL** — Exact words to say, in quotes
+4. **FOLLOW-UP QUESTION** — Strategic question to keep the conversation going
+5. **EMOTIONAL READ** — What they're really feeling underneath
 6. **IF THEY PUSH BACK AGAIN** — A second-level response
 
 Be direct and tactical. This is a live conversation."""
 
-    return stream_anthropic(SYSTEM_PROMPT_BASE, [{"role": "user", "content": objection_prompt}], max_tokens=1500)
+    return call_anthropic(SYSTEM_PROMPT_BASE, [{"role": "user", "content": objection_prompt}], max_tokens=1500)
 
 # ═══════ INTEL ENDPOINTS ═══════
 @app.get("/api/intel/counties")
@@ -149,9 +181,15 @@ async def analyze_intel(req: IntelRequest):
 
     query = req.query or f"Give me a full intelligence briefing on {req.county or req.carrier or 'the NorCal market'}"
     system = SYSTEM_PROMPT_BASE + ("\n\nRELEVANT DATA:\n" + "\n".join(context_parts) if context_parts else "")
-    return stream_anthropic(system, [{"role": "user", "content": query}])
+    return call_anthropic(system, [{"role": "user", "content": query}])
 
 # ═══════ HEALTH CHECK ═══════
 @app.get("/api/health")
 async def health():
-    return JSONResponse(content={"status": "dominating", "counties": len(NORCAL_COUNTIES), "carriers": len(CARRIER_INTEL)})
+    has_key = bool(os.environ.get("ANTHROPIC_API_KEY"))
+    return JSONResponse(content={
+        "status": "dominating",
+        "counties": len(NORCAL_COUNTIES),
+        "carriers": len(CARRIER_INTEL),
+        "api_key_set": has_key
+    })
