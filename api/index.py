@@ -22,7 +22,7 @@ class PitchRequest(BaseModel):
     county: Optional[str] = None
     lines: Optional[str] = None
     experience_years: Optional[int] = None
-    book_size: Optional[int] = None
+    book_size: Optional[str] = None
     pain_points: Optional[str] = None
     stage: Optional[str] = None
 
@@ -93,7 +93,7 @@ async def pitch(req: PitchRequest):
                 break
     prompt = f"""Generate a tailored, high-impact recruiting pitch for this prospect.
 
-PROSPECT: {req.prospect_name} | Carrier: {req.carrier or 'Unknown'} | County: {req.county or 'Unknown'} | Lines: {req.lines or 'Unknown'} | Experience: {req.experience_years or 'Unknown'} yrs | Book: {'$'+f'{req.book_size:,}' if req.book_size else 'Unknown'} | Pain Points: {req.pain_points or 'None'} | Stage: {req.stage or 'Unknown'}
+PROSPECT: {req.prospect_name} | Carrier: {req.carrier or 'Unknown'} | County: {req.county or 'Unknown'} | Lines: {req.lines or 'Unknown'} | Experience: {req.experience_years or 'Unknown'} yrs | Book: {'$'+str(req.book_size) if req.book_size else 'Unknown'} | Pain Points: {req.pain_points or 'None'} | Stage: {req.stage or 'Unknown'}
 {"COUNTY INTEL: " + json.dumps(county_data) if county_data else ""}
 {"CARRIER INTEL: " + json.dumps(carrier_data) if carrier_data else ""}
 

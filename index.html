@@ -2340,7 +2340,7 @@ function generatePitchForProspect(id) {
     county: p.county,
     lines: p.lines,
     experience_years: p.experience,
-    book_size: p.bookSize.toString(),
+    book_size: parseInt(p.bookSize) || undefined,
     pain_points: p.painPoints,
     stage: p.stage
   }, chunk => {
@@ -2477,7 +2477,7 @@ function generatePitch() {
     county: document.getElementById('pitchCounty').value,
     lines: document.getElementById('pitchLines').value,
     experience_years: parseInt(document.getElementById('pitchExp').value) || undefined,
-    book_size: document.getElementById('pitchBook').value,
+    book_size: parseInt(document.getElementById('pitchBook').value.replace(/[^0-9]/g,'')) || undefined,
     pain_points: document.getElementById('pitchPain').value,
     stage: document.getElementById('pitchStage').value
   }, chunk => {
