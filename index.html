@@ -1177,9 +1177,9 @@ th .sort-arrow { margin-left: 4px; font-size: 10px; }
     </nav>
     <div style="padding:16px 24px; border-top:1px solid var(--border);">
       <div style="display:flex;align-items:center;gap:10px;">
-        <div style="width:32px;height:32px;border-radius:50%;background:var(--primary);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:#fff;">BO</div>
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--primary);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:#fff;">SK</div>
         <div>
-          <div style="font-size:13px;font-weight:600;">Ben O'Leary</div>
+          <div style="font-size:13px;font-weight:600;">Sam Kuncio</div>
           <div style="font-size:11px;color:var(--text-muted);">NorCal Region</div>
         </div>
       </div>
@@ -1587,7 +1587,8 @@ th .sort-arrow { margin-left: 4px; font-size: 10px; }
 
 <script>
 // ===== API CONFIG =====
-const API = "__PORT_8000__".startsWith("__") ? "http://localhost:8000" : "__PORT_8000__";
+// Uses relative paths — works on Vercel (same origin) and Perplexity (port proxy)
+const API = (typeof window !== 'undefined' && window.location.hostname === 'localhost') ? 'http://localhost:8000' : '';
 
 // ===== THEME =====
 function toggleTheme() {
