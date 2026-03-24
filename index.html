@@ -1662,7 +1662,7 @@ function mdToHtml(md) {
   return '<p>' + html + '</p>';
 }
 
-// ===== SSE STREAMING =====
+// ===== AI API CALL =====
 async function streamAI(url, body, onChunk, onDone) {
   try {
     const res = await fetch(API + url, {
@@ -1671,10 +1671,30 @@ async function streamAI(url, body, onChunk, onDone) {
       body: JSON.stringify(body)
     });
     if (!res.ok) {
-      onChunk('*Error connecting to AI backend. Make sure the server is running.*');
+      const errData = await res.json().catch(() => null);
+      onChunk('*Error: ' + (errData?.error || 'Could not connect to AI backend') + '*');
       onDone();
       return;
     }
+    const contentType = res.headers.get('content-type') || '';
+    // Handle JSON response (Vercel serverless)
+    if (contentType.includes('application/json')) {
+      const data = await res.json();
+      if (data.error) {
+        onChunk('*Error: ' + data.error + '*');
+      } else if (data.text) {
+        // Simulate typing effect with chunked delivery
+        const text = data.text;
+        const chunkSize = 15;
+        for (let i = 0; i < text.length; i += chunkSize) {
+          onChunk(text.slice(i, i + chunkSize));
+          await new Promise(r => setTimeout(r, 10));
+        }
+      }
+      onDone();
+      return;
+    }
+    // Handle SSE streaming (Perplexity sandbox backend)
     const reader = res.body.getReader();
     const decoder = new TextDecoder();
     let buffer = '';
@@ -1694,7 +1714,7 @@ async function streamAI(url, body, onChunk, onDone) {
     }
     onDone();
   } catch(err) {
-    onChunk('*Error: Could not reach the AI backend at ' + API + '. Please check that the server is running.*');
+    onChunk('*Error: Could not reach the AI backend. Please try again.*');
     onDone();
   }
 }
